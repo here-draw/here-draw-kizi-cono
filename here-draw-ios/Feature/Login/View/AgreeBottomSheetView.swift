@@ -268,7 +268,6 @@ class AgreeBottomSheetView: PassThroughView {
     func allCheckButtonTapped(_ sender: UIButton) {
         didAllChecked.toggle()
         checkAllButton(isSelected: didAllChecked)
-        print("0: \(agreementTermsData[0].checked), 1: \(agreementTermsData[1].checked)")
     }
     
     @objc
@@ -359,7 +358,6 @@ extension AgreeBottomSheetView: AgreementTableViewCellDelegate {
     func checkTerms(didChecked: Bool, index: Int) {
         agreementTermsData[index].checked = didChecked
         updateTermsAgreeStatus()
-        print("0: \(agreementTermsData[0].checked), 1: \(agreementTermsData[1].checked)")
     }
 }
 
