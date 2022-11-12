@@ -26,6 +26,7 @@
 		4FE736B0291E31E400861A0E /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736AF291E31E400861A0E /* LoginResponse.swift */; };
 		4FE736B2291E325800861A0E /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736B1291E325800861A0E /* LoginAPI.swift */; };
 		4FE736B4291EEA2800861A0E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */; };
+		4FE736B6291F560000861A0E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736B5291F560000861A0E /* LoginViewModel.swift */; };
 		4FF2A67128FD806800C236C1 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2A67028FD806800C236C1 /* NetworkUtils.swift */; };
 		4FF2A67528FE3E2800C236C1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2A67428FE3E2800C236C1 /* TabBarController.swift */; };
 		4FF2A67728FE45B700C236C1 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2A67628FE45B700C236C1 /* TabBarItem.swift */; };
@@ -73,6 +74,7 @@
 		4FE736AF291E31E400861A0E /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		4FE736B1291E325800861A0E /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginAPI.swift; path = "here-draw-ios/Model/Login/LoginAPI.swift"; sourceTree = SOURCE_ROOT; };
 		4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4FE736B5291F560000861A0E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4FF2A66E28FD757C00C236C1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4FF2A67028FD806800C236C1 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		4FF2A67428FE3E2800C236C1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			children = (
 				4FF4B49C291646320035ED7F /* LoginViewController.swift */,
 				4F5911E7291BA28A00D84018 /* AgreementViewController.swift */,
+				4FE736B5291F560000861A0E /* LoginViewModel.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				4FF2A67528FE3E2800C236C1 /* TabBarController.swift in Sources */,
 				4FFB547B28FFEFA100093E97 /* HomeArtCollectionViewCell.swift in Sources */,
 				4FE736B4291EEA2800861A0E /* UIViewController+Extension.swift in Sources */,
+				4FE736B6291F560000861A0E /* LoginViewModel.swift in Sources */,
 				4F5911E8291BA28A00D84018 /* AgreementViewController.swift in Sources */,
 				4FF4B4A1291691A60035ED7F /* OnboardingCollectionViewCell.swift in Sources */,
 				4FFB54862902221100093E97 /* UIButton+Extension.swift in Sources */,
@@ -693,7 +697,6 @@
 				DEVELOPMENT_TEAM = 3AQ2WDVH35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "here-draw-ios/Support/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "여기_그림";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -728,7 +731,6 @@
 				DEVELOPMENT_TEAM = 3AQ2WDVH35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "here-draw-ios/Support/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "여기_그림";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
