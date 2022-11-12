@@ -41,6 +41,19 @@ class LoginViewModel {
             }
         }
     }
-                                        
-
+    
+    func handleAppleLogin(token: String, onCompletion: @escaping (Bool) -> Void) {
+        LoginAPI.loginApple(parameters: LoginRequest(accessToken: token)) { [weak self] response in
+            print(response)
+            
+            UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
+            
+            if let nickname = response.result?.nickname {
+                UserDefaults.standard.set(nickname, forKey: "nickname")
+                onCompletion(true)
+            } else {    // 최초 로그인 시(닉네임 X)
+                onCompletion(false)
+            }
+        }
+    }
 }

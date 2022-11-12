@@ -313,10 +313,12 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
             print("User Name : \((fullName?.givenName ?? "") + (fullName?.familyName ?? ""))")
             print("Token : \(tokenString ?? "")")
             
-            LoginAPI.loginApple(parameters: LoginRequest(accessToken: tokenString!)) { [weak self] response in
-                print(response)
-                
-                UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
+            viewModel.handleAppleLogin(token: tokenString!) { [weak self] hasNickname in
+                if hasNickname {
+                    self?.gotoMain()
+                } else {
+                    self?.presentBottomSheet()
+                }
             }
             
         default:
