@@ -7,6 +7,8 @@
 
 import UIKit
 import AuthenticationServices
+import KakaoSDKAuth
+import KakaoSDKCommon
 
 import Alamofire
 import SnapKit
@@ -15,6 +17,8 @@ import Then
 class LoginViewController: BaseViewController {
     
     // MARK: - Properties
+    let viewModel = LoginViewModel()
+    
     let onboardingImages = [
         UIImage(named: "onboarding1")!,
         UIImage(named: "onboarding2")!,
@@ -198,9 +202,13 @@ class LoginViewController: BaseViewController {
     
     @objc
     func kakaoLoginTapped() {
-        // TODO: kakao login api
-        presentBottomSheet()
-        
+        viewModel.handleKakaoLogin { [weak self] hasNickname in
+            if hasNickname {
+                self?.gotoMain()
+            } else {    // 최초 로그인
+                self?.presentBottomSheet()
+            }
+        }
     }
     
     @objc
@@ -305,10 +313,12 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
             print("User Name : \((fullName?.givenName ?? "") + (fullName?.familyName ?? ""))")
             print("Token : \(tokenString ?? "")")
             
-            LoginAPI.loginApple(parameters: LoginRequest(accessToken: tokenString!)) { [weak self] response in
-                print(response)
-                
-                UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
+            viewModel.handleAppleLogin(token: tokenString!) { [weak self] hasNickname in
+                if hasNickname {
+                    self?.gotoMain()
+                } else {
+                    self?.presentBottomSheet()
+                }
             }
             
         default:

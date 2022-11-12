@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import KakaoSDKAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,8 +20,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
-        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
-        window?.makeKeyAndVisible()
+//        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+//        window?.makeKeyAndVisible()
+        
+        LoginAPI.autoLogin(sceneDelegate: self)
+    }
+    
+    func goToView(viewController: UIViewController) {
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func goToMain() {
+        let rootVC = UINavigationController(rootViewController: TabBarController())
+        
+        self.window?.rootViewController = rootVC
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func goToLogin() {
+        let rootVC = UINavigationController(rootViewController: LoginViewController())
+        
+        self.window?.rootViewController = rootVC
+        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,7 +72,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                _ = AuthController.handleOpenUrl(url: url)
+            }
+        }
+    }
 }
 
