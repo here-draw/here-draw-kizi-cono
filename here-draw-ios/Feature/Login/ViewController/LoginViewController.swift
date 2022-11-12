@@ -8,7 +8,7 @@
 import UIKit
 import AuthenticationServices
 
-import ImageSlideshow
+import Alamofire
 import SnapKit
 import Then
 
@@ -30,6 +30,7 @@ class LoginViewController: BaseViewController {
     private weak var pageIndicator: UIPageControl!
     private weak var kakaoLoginButton: UIButton!
     private weak var appleLoginButton: UIButton!
+    private weak var bottomSheetView: AgreeBottomSheetView!
 
     // MARK: - View Life Cycle
     
@@ -171,6 +172,22 @@ class LoginViewController: BaseViewController {
         onboardingCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
     
+    func presentBottomSheet() {
+        bottomSheetView = AgreeBottomSheetView().then {
+            $0.delegate = self
+            $0.bottomSheetColor = .black1
+            $0.bottomSheetShadowColor = UIColor.pastelYellow.cgColor
+            view.addSubview($0)
+            
+            $0.snp.makeConstraints {
+                $0.edges.equalToSuperview()
+            }
+        }
+    }
+    
+    func handleSignIn() {
+    }
+    
     // MARK: objc func
     
     @objc
@@ -181,12 +198,21 @@ class LoginViewController: BaseViewController {
     
     @objc
     func kakaoLoginTapped() {
-        print("kakao")
+        // TODO: kakao login api
+        presentBottomSheet()
+        
     }
     
     @objc
     func appleLoginTapped() {
-        print("apple")
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
     }
 }
 
@@ -239,3 +265,60 @@ extension LoginViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: - AgreeBottomSheetViewDelegate
+
+extension LoginViewController: AgreeBottomSheetViewDelegate {
+    func pushAgreementVC(title: String) {
+        let vc = AgreementViewController()
+        vc.fetchTitle(str: title)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func pushOnboardingVC() {
+        gotoMain()
+        // TODO: 온보딩 페이지로(닉네임 설정)
+    }
+}
+
+// MARK: - Apple Login Extensions
+
+extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    
+    // 로그인 진행하는 화면 표출
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
+    }
+    
+    // Apple ID 연동 성공 시
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+            // Apple ID
+        case let appleIDCredential as ASAuthorizationAppleIDCredential:
+            let userIdentifier = appleIDCredential.user
+            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+            let accessToken = appleIDCredential.identityToken
+            let tokenString = String(data: accessToken!, encoding: .utf8)
+            
+            print("User ID : \(userIdentifier)")
+            print("User Email : \(email ?? "")")
+            print("User Name : \((fullName?.givenName ?? "") + (fullName?.familyName ?? ""))")
+            print("Token : \(tokenString ?? "")")
+            
+            LoginAPI.loginApple(parameters: LoginRequest(accessToken: tokenString!)) { [weak self] response in
+                print(response)
+                
+                UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
+            }
+            
+        default:
+            break
+        }
+    }
+    
+    // Apple ID 연동 실패 시
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        // Handle error.
+        print("--- login error")
+    }
+}

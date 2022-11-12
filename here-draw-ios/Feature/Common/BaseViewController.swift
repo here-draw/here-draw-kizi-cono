@@ -34,6 +34,10 @@ class BaseViewController: UIViewController {
     // 네비게이션 바가 필요한 뷰컨에서 호출하기.
     func initNavigationBar() {
         navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.tintColor = .white1
+        self.navigationController?.navigationBar.barTintColor = .black1
+        self.navigationController?.navigationBar.backgroundColor = .black1
+//        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     func hideNavigationBar() {
@@ -46,4 +50,9 @@ class BaseViewController: UIViewController {
     func hierarchy() {}
     
     func setLayout() {}
+    
+    func gotoMain() {
+        let tabVC = TabBarController()
+        changeRootViewController(tabVC)
+    }
 }
