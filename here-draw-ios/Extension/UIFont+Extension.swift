@@ -65,6 +65,9 @@ extension UIFont {
     class var gmarketSans15Pt: UIFont {
         return UIFont(name: "GmarketSansMedium", size: 15.0)!
     }
+    class var sfPro15Pt: UIFont {
+        return UIFont.systemFont(ofSize: 15.0, weight: .medium)
+    }
     class var sfPro14Pt3: UIFont {
         return UIFont.systemFont(ofSize: 14.0, weight: .bold)
     }

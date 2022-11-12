@@ -11,10 +11,21 @@
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
 		4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673928F6714600E2DFBA /* SceneDelegate.swift */; };
 		4F0A674128F6714700E2DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0A674028F6714700E2DFBA /* Assets.xcassets */; };
+		4F5911DC291B6BC100D84018 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911DB291B6BC100D84018 /* BottomSheetView.swift */; };
+		4F5911DE291B6C0000D84018 /* PassThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911DD291B6C0000D84018 /* PassThroughView.swift */; };
+		4F5911E1291B6C5D00D84018 /* AgreeBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911E0291B6C5D00D84018 /* AgreeBottomSheetView.swift */; };
+		4F5911E3291B6CE800D84018 /* AgreementTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911E2291B6CE800D84018 /* AgreementTerms.swift */; };
+		4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911E5291B725700D84018 /* AgreementTableViewCell.swift */; };
+		4F5911E8291BA28A00D84018 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911E7291BA28A00D84018 /* AgreementViewController.swift */; };
+		4F5911EA291BB58100D84018 /* AgreementContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911E9291BB58100D84018 /* AgreementContents.swift */; };
 		4F89175C28FBC297005A1B81 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89175B28FBC297005A1B81 /* UIColor+Extension.swift */; };
 		4F89176028FBCC3E005A1B81 /* GmarketSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F89175E28FBCC3E005A1B81 /* GmarketSans-Bold.otf */; };
 		4F89176128FBCC3E005A1B81 /* GmarketSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F89175F28FBCC3E005A1B81 /* GmarketSans-Medium.otf */; };
 		4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89176228FBCD3C005A1B81 /* UIFont+Extension.swift */; };
+		4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736AD291E31A600861A0E /* LoginRequest.swift */; };
+		4FE736B0291E31E400861A0E /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736AF291E31E400861A0E /* LoginResponse.swift */; };
+		4FE736B2291E325800861A0E /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736B1291E325800861A0E /* LoginAPI.swift */; };
+		4FE736B4291EEA2800861A0E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */; };
 		4FF2A67128FD806800C236C1 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2A67028FD806800C236C1 /* NetworkUtils.swift */; };
 		4FF2A67528FE3E2800C236C1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2A67428FE3E2800C236C1 /* TabBarController.swift */; };
 		4FF2A67728FE45B700C236C1 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2A67628FE45B700C236C1 /* TabBarItem.swift */; };
@@ -47,10 +58,21 @@
 		4F0A673928F6714600E2DFBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4F0A674028F6714700E2DFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F0A674528F6714700E2DFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F5911DB291B6BC100D84018 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		4F5911DD291B6C0000D84018 /* PassThroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughView.swift; sourceTree = "<group>"; };
+		4F5911E0291B6C5D00D84018 /* AgreeBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeBottomSheetView.swift; sourceTree = "<group>"; };
+		4F5911E2291B6CE800D84018 /* AgreementTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementTerms.swift; sourceTree = "<group>"; };
+		4F5911E5291B725700D84018 /* AgreementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementTableViewCell.swift; sourceTree = "<group>"; };
+		4F5911E7291BA28A00D84018 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
+		4F5911E9291BB58100D84018 /* AgreementContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementContents.swift; sourceTree = "<group>"; };
 		4F89175B28FBC297005A1B81 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4F89175E28FBCC3E005A1B81 /* GmarketSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GmarketSans-Bold.otf"; sourceTree = "<group>"; };
 		4F89175F28FBCC3E005A1B81 /* GmarketSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GmarketSans-Medium.otf"; sourceTree = "<group>"; };
 		4F89176228FBCD3C005A1B81 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		4FE736AD291E31A600861A0E /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		4FE736AF291E31E400861A0E /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		4FE736B1291E325800861A0E /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginAPI.swift; path = "here-draw-ios/Model/Login/LoginAPI.swift"; sourceTree = SOURCE_ROOT; };
+		4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4FF2A66E28FD757C00C236C1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4FF2A67028FD806800C236C1 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		4FF2A67428FE3E2800C236C1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -127,6 +149,25 @@
 			path = "here-draw-ios";
 			sourceTree = "<group>";
 		};
+		4F5911DF291B6C4D00D84018 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F5911E0291B6C5D00D84018 /* AgreeBottomSheetView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4F5911E4291B6CF100D84018 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4F5911E2291B6CE800D84018 /* AgreementTerms.swift */,
+				4F5911E9291BB58100D84018 /* AgreementContents.swift */,
+				4FE736AD291E31A600861A0E /* LoginRequest.swift */,
+				4FE736AF291E31E400861A0E /* LoginResponse.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		4F89175728FACFB7005A1B81 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +204,7 @@
 				4FFB54852902221100093E97 /* UIButton+Extension.swift */,
 				4FFB549129093EAF00093E97 /* UINavigationItem+Extension.swift */,
 				4FF4B49929142FF40035ED7F /* UIImage+Extension.swift */,
+				4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -180,6 +222,7 @@
 		4FF2A66F28FD803500C236C1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4FE736B1291E325800861A0E /* LoginAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -260,6 +303,8 @@
 				4FFB5481290170E300093E97 /* BaseScrollView.swift */,
 				4FFB5494290CD7D900093E97 /* NavigationBarView.swift */,
 				4FF4B4932913D92F0035ED7F /* BaseView.swift */,
+				4F5911DB291B6BC100D84018 /* BottomSheetView.swift */,
+				4F5911DD291B6C0000D84018 /* PassThroughView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -267,6 +312,7 @@
 		4FF4B49B291646050035ED7F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				4F5911DF291B6C4D00D84018 /* View */,
 				4FF4B49F291690710035ED7F /* Cell */,
 				4FF4B49E291690570035ED7F /* ViewController */,
 			);
@@ -277,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				4FF4B49C291646320035ED7F /* LoginViewController.swift */,
+				4F5911E7291BA28A00D84018 /* AgreementViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -285,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				4FF4B4A0291691A60035ED7F /* OnboardingCollectionViewCell.swift */,
+				4F5911E5291B725700D84018 /* AgreementTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -317,6 +365,7 @@
 		4FFB548829025EBB00093E97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F5911E4291B6CF100D84018 /* Login */,
 				4FFB548929025ECB00093E97 /* Home */,
 			);
 			path = Model;
@@ -471,15 +520,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF4B49D291646320035ED7F /* LoginViewController.swift in Sources */,
+				4FE736B0291E31E400861A0E /* LoginResponse.swift in Sources */,
 				4FF2A68928FE6DFD00C236C1 /* BaseViewController.swift in Sources */,
 				4FFB547328FF9F0800093E97 /* HomeListViewController.swift in Sources */,
+				4F5911DE291B6C0000D84018 /* PassThroughView.swift in Sources */,
 				4FFB5495290CD7D900093E97 /* NavigationBarView.swift in Sources */,
 				4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */,
 				4FFB548029016F4A00093E97 /* HomeTopView.swift in Sources */,
+				4FE736B2291E325800861A0E /* LoginAPI.swift in Sources */,
 				4FFB548B29025EE200093E97 /* HomeArtModel.swift in Sources */,
 				4FFB547828FFB77400093E97 /* PagerTab.swift in Sources */,
 				4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */,
 				4FF2A68628FE4C0B00C236C1 /* MypageViewController.swift in Sources */,
+				4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */,
+				4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */,
 				4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */,
 				4FF2A68028FE4BE000C236C1 /* MessageViewController.swift in Sources */,
 				4FF2A68428FE4BFD00C236C1 /* WishViewController.swift in Sources */,
@@ -487,8 +541,13 @@
 				4FF4B49A29142FF40035ED7F /* UIImage+Extension.swift in Sources */,
 				4FFB549E2910445B00093E97 /* PinterestLayout.swift in Sources */,
 				4FF2A68228FE4BF000C236C1 /* ArticleViewController.swift in Sources */,
+				4F5911E3291B6CE800D84018 /* AgreementTerms.swift in Sources */,
+				4F5911DC291B6BC100D84018 /* BottomSheetView.swift in Sources */,
+				4F5911EA291BB58100D84018 /* AgreementContents.swift in Sources */,
 				4FF2A67528FE3E2800C236C1 /* TabBarController.swift in Sources */,
 				4FFB547B28FFEFA100093E97 /* HomeArtCollectionViewCell.swift in Sources */,
+				4FE736B4291EEA2800861A0E /* UIViewController+Extension.swift in Sources */,
+				4F5911E8291BA28A00D84018 /* AgreementViewController.swift in Sources */,
 				4FF4B4A1291691A60035ED7F /* OnboardingCollectionViewCell.swift in Sources */,
 				4FFB54862902221100093E97 /* UIButton+Extension.swift in Sources */,
 				4FF2A67E28FE4BCF00C236C1 /* HomeViewController.swift in Sources */,
@@ -497,6 +556,7 @@
 				4FF2A67728FE45B700C236C1 /* TabBarItem.swift in Sources */,
 				4FFB5482290170E300093E97 /* BaseScrollView.swift in Sources */,
 				4FFB549229093EAF00093E97 /* UINavigationItem+Extension.swift in Sources */,
+				4F5911E1291B6C5D00D84018 /* AgreeBottomSheetView.swift in Sources */,
 				4F89175C28FBC297005A1B81 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,6 +693,7 @@
 				DEVELOPMENT_TEAM = 3AQ2WDVH35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "here-draw-ios/Support/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "여기_그림";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -667,6 +728,7 @@
 				DEVELOPMENT_TEAM = 3AQ2WDVH35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "here-draw-ios/Support/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "여기_그림";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
