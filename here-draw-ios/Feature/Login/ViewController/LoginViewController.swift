@@ -283,8 +283,8 @@ extension LoginViewController: AgreeBottomSheetViewDelegate {
     }
     
     func pushOnboardingVC() {
-        gotoMain()
-        // TODO: 온보딩 페이지로(닉네임 설정)
+        let vc = OnboardingViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
