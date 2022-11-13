@@ -14,6 +14,8 @@
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
 		4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673928F6714600E2DFBA /* SceneDelegate.swift */; };
 		4F0A674128F6714700E2DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0A674028F6714700E2DFBA /* Assets.xcassets */; };
+		4F461CE529214743006A8576 /* ArtHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F461CE429214743006A8576 /* ArtHeaderView.swift */; };
+		4F461CE729214753006A8576 /* ArtDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F461CE629214753006A8576 /* ArtDetailView.swift */; };
 		4F5911DC291B6BC100D84018 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911DB291B6BC100D84018 /* BottomSheetView.swift */; };
 		4F5911DE291B6C0000D84018 /* PassThroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911DD291B6C0000D84018 /* PassThroughView.swift */; };
 		4F5911E1291B6C5D00D84018 /* AgreeBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911E0291B6C5D00D84018 /* AgreeBottomSheetView.swift */; };
@@ -21,6 +23,7 @@
 		4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911E5291B725700D84018 /* AgreementTableViewCell.swift */; };
 		4F5911E8291BA28A00D84018 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911E7291BA28A00D84018 /* AgreementViewController.swift */; };
 		4F5911EA291BB58100D84018 /* AgreementContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5911E9291BB58100D84018 /* AgreementContents.swift */; };
+		4F7D9D672921339B00A9ABE1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7D9D662921339B00A9ABE1 /* DetailViewController.swift */; };
 		4F89175C28FBC297005A1B81 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89175B28FBC297005A1B81 /* UIColor+Extension.swift */; };
 		4F89176028FBCC3E005A1B81 /* GmarketSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F89175E28FBCC3E005A1B81 /* GmarketSans-Bold.otf */; };
 		4F89176128FBCC3E005A1B81 /* GmarketSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F89175F28FBCC3E005A1B81 /* GmarketSans-Medium.otf */; };
@@ -68,6 +71,8 @@
 		4F0A673928F6714600E2DFBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4F0A674028F6714700E2DFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F0A674528F6714700E2DFBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F461CE429214743006A8576 /* ArtHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtHeaderView.swift; sourceTree = "<group>"; };
+		4F461CE629214753006A8576 /* ArtDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailView.swift; sourceTree = "<group>"; };
 		4F5911DB291B6BC100D84018 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		4F5911DD291B6C0000D84018 /* PassThroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughView.swift; sourceTree = "<group>"; };
 		4F5911E0291B6C5D00D84018 /* AgreeBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeBottomSheetView.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		4F5911E5291B725700D84018 /* AgreementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementTableViewCell.swift; sourceTree = "<group>"; };
 		4F5911E7291BA28A00D84018 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
 		4F5911E9291BB58100D84018 /* AgreementContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementContents.swift; sourceTree = "<group>"; };
+		4F7D9D662921339B00A9ABE1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4F89175B28FBC297005A1B81 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		4F89175E28FBCC3E005A1B81 /* GmarketSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GmarketSans-Bold.otf"; sourceTree = "<group>"; };
 		4F89175F28FBCC3E005A1B81 /* GmarketSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GmarketSans-Medium.otf"; sourceTree = "<group>"; };
@@ -192,6 +198,32 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4F7D9D652921334200A9ABE1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4F7D9D68292133AF00A9ABE1 /* View */,
+				4F7D9D69292133B400A9ABE1 /* ViewController */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		4F7D9D68292133AF00A9ABE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F461CE429214743006A8576 /* ArtHeaderView.swift */,
+				4F461CE629214753006A8576 /* ArtDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4F7D9D69292133B400A9ABE1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4F7D9D662921339B00A9ABE1 /* DetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		4F89175728FACFB7005A1B81 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,10 +305,11 @@
 		4FF2A67328FD82B200C236C1 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				4FF2A68728FE4C1300C236C1 /* Common */,
 				4FE736B9291FDF4A00861A0E /* Onboarding */,
 				4FF4B49B291646050035ED7F /* Login */,
-				4FF2A68728FE4C1300C236C1 /* Common */,
 				4FF2A67C28FE4B8000C236C1 /* Home */,
+				4F7D9D652921334200A9ABE1 /* Detail */,
 				4FF2A67B28FE4B7700C236C1 /* Message */,
 				4FF2A67A28FE4B6900C236C1 /* Article */,
 				4FF2A67928FE4B6000C236C1 /* Wish */,
@@ -564,7 +597,9 @@
 				4FE736B8291F741F00861A0E /* AutoLoginResponse.swift in Sources */,
 				4FFB5495290CD7D900093E97 /* NavigationBarView.swift in Sources */,
 				4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */,
+				4F461CE729214753006A8576 /* ArtDetailView.swift in Sources */,
 				4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */,
+				4F461CE529214743006A8576 /* ArtHeaderView.swift in Sources */,
 				4FFB548029016F4A00093E97 /* HomeTopView.swift in Sources */,
 				4FE736BB291FE0A800861A0E /* OnboardingViewController.swift in Sources */,
 				4FE736B2291E325800861A0E /* LoginAPI.swift in Sources */,
@@ -572,6 +607,7 @@
 				4FFB547828FFB77400093E97 /* PagerTab.swift in Sources */,
 				4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */,
 				4FF2A68628FE4C0B00C236C1 /* MypageViewController.swift in Sources */,
+				4F7D9D672921339B00A9ABE1 /* DetailViewController.swift in Sources */,
 				4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */,
 				4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */,
 				4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */,
