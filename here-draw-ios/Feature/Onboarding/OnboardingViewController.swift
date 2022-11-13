@@ -18,10 +18,13 @@ class OnboardingViewController: BaseViewController {
     var isValidString: Bool = false {
         didSet {
             if !isValidString {
+                nicknameTextField.layer.borderColor = UIColor.brownGrey.cgColor
+                doubleCheckButton.layer.borderColor = UIColor.brownGrey.cgColor
                 resultLabel.isHidden = false
                 doubleCheckButton.isEnabled = false
                 nextButton.isEnabled = false
                 resultLabel.text = "유효하지 않은 형식입니다."
+                resultLabel.textColor = .grapefruit
             } else {
                 resultLabel.isHidden = true
                 doubleCheckButton.isEnabled = true
@@ -181,6 +184,7 @@ class OnboardingViewController: BaseViewController {
     
     @objc
     func checkTextField() {
+        isValidString = false
         // 글자 수 10자 넘으면 입력 불가
         if nicknameTextField.text?.count ?? 0 > 10 {
             nicknameTextField.deleteBackward()
@@ -205,7 +209,17 @@ class OnboardingViewController: BaseViewController {
     
     @objc
     func nextButtonTapped(_ sender: UIButton) {
-        print("next")
+        guard let nickname = nicknameTextField.text else { return }
+        viewModel.setNickname(nickname: nickname) { (isSuccess, message) in
+            if isSuccess {
+                self.gotoMain()
+            }
+            else {
+                self.availableNickname = false
+                self.resultLabel.text = message
+                self.resultLabel.isHidden = false
+            }
+        }
     }
     
     @objc

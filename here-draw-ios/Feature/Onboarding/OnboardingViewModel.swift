@@ -21,4 +21,16 @@ class OnboardingViewModel {
     }
     
     // TODO: 닉네임 설정
+    func setNickname(nickname: String, onCompletion: @escaping (Bool, String) -> Void) {
+        OnboardingAPI.registerNickname(parameters: NicknameRequest(nickname: nickname)) { response in
+            if let result = response.result {
+                UserDefaults.standard.set(nickname, forKey: "nickname")
+                onCompletion(true, result)
+            }
+            else {
+                onCompletion(false, response.message)
+            }
+        }
+    }
+    
 }
