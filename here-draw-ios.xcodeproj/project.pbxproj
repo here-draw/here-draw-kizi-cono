@@ -11,6 +11,7 @@
 		4F04A9122920814300DBF180 /* OnboardingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9112920814300DBF180 /* OnboardingAPI.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
 		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
+		4F04A91A2920D48300DBF180 /* StompManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9192920D48300DBF180 /* StompManager.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
 		4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673928F6714600E2DFBA /* SceneDelegate.swift */; };
 		4F0A674128F6714700E2DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0A674028F6714700E2DFBA /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		4F04A9112920814300DBF180 /* OnboardingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingAPI.swift; path = "here-draw-ios/Feature/Onboarding/OnboardingAPI.swift"; sourceTree = SOURCE_ROOT; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
 		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
+		4F04A9192920D48300DBF180 /* StompManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StompManager.swift; path = "here-draw-ios/Model/Onboarding/StompManager.swift"; sourceTree = SOURCE_ROOT; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0A673728F6714600E2DFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F0A673928F6714600E2DFBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			children = (
 				4FE736B1291E325800861A0E /* LoginAPI.swift */,
 				4F04A9112920814300DBF180 /* OnboardingAPI.swift */,
+				4F04A9192920D48300DBF180 /* StompManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */,
 				4FF2A68028FE4BE000C236C1 /* MessageViewController.swift in Sources */,
 				4FF2A68428FE4BFD00C236C1 /* WishViewController.swift in Sources */,
+				4F04A91A2920D48300DBF180 /* StompManager.swift in Sources */,
 				4FF4B4942913D92F0035ED7F /* BaseView.swift in Sources */,
 				4FF4B49A29142FF40035ED7F /* UIImage+Extension.swift in Sources */,
 				4FFB549E2910445B00093E97 /* PinterestLayout.swift in Sources */,
