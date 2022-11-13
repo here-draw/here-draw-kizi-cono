@@ -32,4 +32,42 @@ extension UIViewController {
             self.present(vc, animated: true)
         }
     }
+    
+    func showToast(message: String) {
+        // frame: CGRect(x: 47, y: view.frame.size.height - 400, width: view.frame.size.width - 94, height: 97)
+        let toastView = UIView().then {
+            $0.backgroundColor = .greyishDeepBrown
+            $0.layer.cornerRadius = 20
+            $0.clipsToBounds = true
+            view.addSubview($0)
+        }
+        
+        let toastLabel = UILabel().then {
+            $0.text = message
+            $0.textAlignment = .center
+            $0.textColor = .white
+            $0.font = .sfPro14Pt
+            $0.clipsToBounds = true
+            $0.numberOfLines = 2
+            $0.sizeToFit()
+            toastView.addSubview($0)
+        }
+        
+        toastView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(47)
+            $0.height.equalTo(toastLabel.snp.height).offset(60)
+        }
+        
+        toastLabel.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+        
+        // 토스트 애니메이션
+        UIView.animate(
+            withDuration: 3.0, delay: 0.1,
+            options: .curveEaseIn, animations: { toastView.alpha = 0.0 },
+            completion: {_ in toastView.removeFromSuperview() }
+        )
+    }
 }

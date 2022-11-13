@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04F7BDC030BF47FB6041BBD1 /* Pods_here_draw_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A785D247F376F6FF223E4DCB /* Pods_here_draw_ios.framework */; };
+		4F04A9122920814300DBF180 /* OnboardingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9112920814300DBF180 /* OnboardingAPI.swift */; };
+		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
+		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
 		4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673928F6714600E2DFBA /* SceneDelegate.swift */; };
 		4F0A674128F6714700E2DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0A674028F6714700E2DFBA /* Assets.xcassets */; };
@@ -28,6 +31,8 @@
 		4FE736B4291EEA2800861A0E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */; };
 		4FE736B6291F560000861A0E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736B5291F560000861A0E /* LoginViewModel.swift */; };
 		4FE736B8291F741F00861A0E /* AutoLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736B7291F741F00861A0E /* AutoLoginResponse.swift */; };
+		4FE736BB291FE0A800861A0E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736BA291FE0A800861A0E /* OnboardingViewController.swift */; };
+		4FE736BD291FE0D500861A0E /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736BC291FE0D500861A0E /* OnboardingViewModel.swift */; };
 		4FF2A67128FD806800C236C1 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2A67028FD806800C236C1 /* NetworkUtils.swift */; };
 		4FF2A67528FE3E2800C236C1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2A67428FE3E2800C236C1 /* TabBarController.swift */; };
 		4FF2A67728FE45B700C236C1 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2A67628FE45B700C236C1 /* TabBarItem.swift */; };
@@ -55,6 +60,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F04A9112920814300DBF180 /* OnboardingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingAPI.swift; path = "here-draw-ios/Feature/Onboarding/OnboardingAPI.swift"; sourceTree = SOURCE_ROOT; };
+		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
+		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0A673728F6714600E2DFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F0A673928F6714600E2DFBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +85,8 @@
 		4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4FE736B5291F560000861A0E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4FE736B7291F741F00861A0E /* AutoLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginResponse.swift; sourceTree = "<group>"; };
+		4FE736BA291FE0A800861A0E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4FE736BC291FE0D500861A0E /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		4FF2A66E28FD757C00C236C1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4FF2A67028FD806800C236C1 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		4FF2A67428FE3E2800C236C1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -120,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F04A913292082DF00DBF180 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4F04A914292082F000DBF180 /* NicknameRequest.swift */,
+				4F04A9162920831200DBF180 /* NicknameResponse.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		4F0A672B28F6714600E2DFBA = {
 			isa = PBXGroup;
 			children = (
@@ -224,10 +243,20 @@
 			path = "here-draw-ios/Resource/Font";
 			sourceTree = SOURCE_ROOT;
 		};
+		4FE736B9291FDF4A00861A0E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4FE736BA291FE0A800861A0E /* OnboardingViewController.swift */,
+				4FE736BC291FE0D500861A0E /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		4FF2A66F28FD803500C236C1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				4FE736B1291E325800861A0E /* LoginAPI.swift */,
+				4F04A9112920814300DBF180 /* OnboardingAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -244,6 +273,7 @@
 		4FF2A67328FD82B200C236C1 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				4FE736B9291FDF4A00861A0E /* Onboarding */,
 				4FF4B49B291646050035ED7F /* Login */,
 				4FF2A68728FE4C1300C236C1 /* Common */,
 				4FF2A67C28FE4B8000C236C1 /* Home */,
@@ -371,6 +401,7 @@
 		4FFB548829025EBB00093E97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F04A913292082DF00DBF180 /* Onboarding */,
 				4F5911E4291B6CF100D84018 /* Login */,
 				4FFB548929025ECB00093E97 /* Home */,
 			);
@@ -533,7 +564,9 @@
 				4FE736B8291F741F00861A0E /* AutoLoginResponse.swift in Sources */,
 				4FFB5495290CD7D900093E97 /* NavigationBarView.swift in Sources */,
 				4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */,
+				4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */,
 				4FFB548029016F4A00093E97 /* HomeTopView.swift in Sources */,
+				4FE736BB291FE0A800861A0E /* OnboardingViewController.swift in Sources */,
 				4FE736B2291E325800861A0E /* LoginAPI.swift in Sources */,
 				4FFB548B29025EE200093E97 /* HomeArtModel.swift in Sources */,
 				4FFB547828FFB77400093E97 /* PagerTab.swift in Sources */,
@@ -547,6 +580,8 @@
 				4FF4B4942913D92F0035ED7F /* BaseView.swift in Sources */,
 				4FF4B49A29142FF40035ED7F /* UIImage+Extension.swift in Sources */,
 				4FFB549E2910445B00093E97 /* PinterestLayout.swift in Sources */,
+				4F04A9122920814300DBF180 /* OnboardingAPI.swift in Sources */,
+				4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */,
 				4FF2A68228FE4BF000C236C1 /* ArticleViewController.swift in Sources */,
 				4F5911E3291B6CE800D84018 /* AgreementTerms.swift in Sources */,
 				4F5911DC291B6BC100D84018 /* BottomSheetView.swift in Sources */,
@@ -560,6 +595,7 @@
 				4FFB54862902221100093E97 /* UIButton+Extension.swift in Sources */,
 				4FF2A67E28FE4BCF00C236C1 /* HomeViewController.swift in Sources */,
 				4FF2A67128FD806800C236C1 /* NetworkUtils.swift in Sources */,
+				4FE736BD291FE0D500861A0E /* OnboardingViewModel.swift in Sources */,
 				4FF2A68D28FEC4E000C236C1 /* DeviceUtils.swift in Sources */,
 				4FF2A67728FE45B700C236C1 /* TabBarItem.swift in Sources */,
 				4FFB5482290170E300093E97 /* BaseScrollView.swift in Sources */,

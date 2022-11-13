@@ -27,6 +27,7 @@ class LoginAPI {
                             sceneDelegate.goToMain()
                         } else {
                             // go Onboarding
+                            sceneDelegate.goToView(viewController: OnboardingViewController())
                         }
                         
                     case false:
