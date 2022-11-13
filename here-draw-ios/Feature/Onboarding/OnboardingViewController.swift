@@ -28,6 +28,23 @@ class OnboardingViewController: BaseViewController {
             }
         }
     }
+    var availableNickname: Bool = false {
+        didSet {
+            if availableNickname {
+                nicknameTextField.layer.borderColor = UIColor.pastelYellow.cgColor
+                doubleCheckButton.layer.borderColor = UIColor.pastelYellow.cgColor
+                resultLabel.textColor = .pastelYellow
+                nextButton.isEnabled = true
+                nextButton.backgroundColor = .pastelYellow
+            } else {
+                nicknameTextField.layer.borderColor = UIColor.grapefruit.cgColor
+                doubleCheckButton.layer.borderColor = UIColor.grapefruit.cgColor
+                resultLabel.textColor = .grapefruit
+                nextButton.isEnabled = false
+                nextButton.backgroundColor = .greyishDeepBrown
+            }
+        }
+    }
     
     private weak var nicknameTextField: UITextField!
     private weak var doubleCheckButton: UIButton!
@@ -41,9 +58,15 @@ class OnboardingViewController: BaseViewController {
         initNavigationBar()
         setNavigationBar()
         dismissKeyboardByTouching()
+        controlNextButtonByKeyboard()
     }
     
     // MARK: - Functions
+    
+    func controlNextButtonByKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustNextButtonHeight), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustNextButtonHeight), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     
     override func setNavigationBar() {
         self.navigationController?.navigationBar.topItem?.title = ""
@@ -145,6 +168,7 @@ class OnboardingViewController: BaseViewController {
             $0.titleLabel?.font = .sfPro22Pt
             $0.setTitleColor(.black, for: .normal)
             $0.isEnabled = false
+            $0.addTarget(self, action: #selector(nextButtonTapped(_:)), for: .touchUpInside)
             view.addSubview($0)
             
             $0.snp.makeConstraints {
@@ -163,7 +187,7 @@ class OnboardingViewController: BaseViewController {
         }
         
         // 유효한 문자인지 검사(by 정규식)
-        let regex = "^[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9]{2,10}$"
+        let regex = "^[가-힣ㄱ-ㅎㅏ-ㅣa-zA-Z0-9]{1,10}$"
         let test = NSPredicate(format: "SELF MATCHES %@", regex)
         isValidString = test.evaluate(with: nicknameTextField.text ?? "")
     }
@@ -171,33 +195,33 @@ class OnboardingViewController: BaseViewController {
     @objc
     func doubleCheckButtonTapped(_ sender: UIButton) {
         // TODO: 뷰모델로부터 중복 검사 api 연결
-        // TODO: 검사 결과에 따라 UI 업뎃
-        // TODO: 사용 가능한 닉네임이라면 next버튼 활성화
+        guard let nickname = nicknameTextField.text else { return }
+        viewModel.doubleCheckNickname(nickname: nickname) { (available, message) in
+            self.availableNickname = available
+            self.resultLabel.text = message
+            self.resultLabel.isHidden = false
+        }
+    }
+    
+    @objc
+    func nextButtonTapped(_ sender: UIButton) {
+        print("next")
+    }
+    
+    @objc
+    func adjustNextButtonHeight(noti: Notification) {
+        guard let userInfo = noti.userInfo else { return }
+        
+        guard let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        else { return }
+        
+        nextButton.snp.remakeConstraints {
+            let iskeyboardUp = noti.name == UIResponder.keyboardWillShowNotification
+            let adjustmentHeight = iskeyboardUp ? keyboardFrame.height - view.safeAreaInsets.bottom + 10: 35
+            
+            $0.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(20)
+            $0.bottom.equalToSuperview().inset(adjustmentHeight)
+            $0.height.equalTo(58)
+        }
     }
 }
-
-//MARK: - Preview
-
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-
-struct ViewRepresentable: UIViewRepresentable{
-    typealias UIViewType = UIView
-    private let vc = UINavigationController(rootViewController: OnboardingViewController())
-
-    func makeUIView(context: Context) -> UIView {
-        vc.view
-    }
-
-    func updateUIView(_ uiView: UIView, context: Context) {
-        // 데이터 로드 필요할 때
-        // vc.tableView.reloadData()
-    }
-}
-
-struct ViewController_Previews: PreviewProvider{
-    static var previews: some View{
-        ViewRepresentable()
-    }
-}
-#endif

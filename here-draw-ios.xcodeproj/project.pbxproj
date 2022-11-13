@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		04F7BDC030BF47FB6041BBD1 /* Pods_here_draw_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A785D247F376F6FF223E4DCB /* Pods_here_draw_ios.framework */; };
+		4F04A9122920814300DBF180 /* OnboardingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9112920814300DBF180 /* OnboardingAPI.swift */; };
+		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
+		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
 		4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673928F6714600E2DFBA /* SceneDelegate.swift */; };
 		4F0A674128F6714700E2DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0A674028F6714700E2DFBA /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F04A9112920814300DBF180 /* OnboardingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingAPI.swift; path = "here-draw-ios/Feature/Onboarding/OnboardingAPI.swift"; sourceTree = SOURCE_ROOT; };
+		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
+		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0A673728F6714600E2DFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F0A673928F6714600E2DFBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F04A913292082DF00DBF180 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4F04A914292082F000DBF180 /* NicknameRequest.swift */,
+				4F04A9162920831200DBF180 /* NicknameResponse.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		4F0A672B28F6714600E2DFBA = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				4FE736B1291E325800861A0E /* LoginAPI.swift */,
+				4F04A9112920814300DBF180 /* OnboardingAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -385,6 +401,7 @@
 		4FFB548829025EBB00093E97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F04A913292082DF00DBF180 /* Onboarding */,
 				4F5911E4291B6CF100D84018 /* Login */,
 				4FFB548929025ECB00093E97 /* Home */,
 			);
@@ -547,6 +564,7 @@
 				4FE736B8291F741F00861A0E /* AutoLoginResponse.swift in Sources */,
 				4FFB5495290CD7D900093E97 /* NavigationBarView.swift in Sources */,
 				4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */,
+				4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */,
 				4FFB548029016F4A00093E97 /* HomeTopView.swift in Sources */,
 				4FE736BB291FE0A800861A0E /* OnboardingViewController.swift in Sources */,
 				4FE736B2291E325800861A0E /* LoginAPI.swift in Sources */,
@@ -562,6 +580,8 @@
 				4FF4B4942913D92F0035ED7F /* BaseView.swift in Sources */,
 				4FF4B49A29142FF40035ED7F /* UIImage+Extension.swift in Sources */,
 				4FFB549E2910445B00093E97 /* PinterestLayout.swift in Sources */,
+				4F04A9122920814300DBF180 /* OnboardingAPI.swift in Sources */,
+				4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */,
 				4FF2A68228FE4BF000C236C1 /* ArticleViewController.swift in Sources */,
 				4F5911E3291B6CE800D84018 /* AgreementTerms.swift in Sources */,
 				4F5911DC291B6BC100D84018 /* BottomSheetView.swift in Sources */,
