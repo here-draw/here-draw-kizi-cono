@@ -18,8 +18,8 @@ class StompManager {
     func registerSockect() {
         socketClient.openSocketWithURLRequest(
             request: NSURLRequest(url: url),
-            delegate: self,
-            connectionHeaders: ["X-ACCESS-TOKEN" : NetworkUtils.jwt!]
+            delegate: self
+            /*connectionHeaders: ["X-ACCESS-TOKEN" : NetworkUtils.jwt!]*/
         )
     }
     

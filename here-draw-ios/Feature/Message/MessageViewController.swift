@@ -24,6 +24,7 @@ class MessageViewController: BaseViewController {
         testButton = UIButton().then {
             $0.backgroundColor = .pastelYellow
             $0.titleLabel?.textColor = .white
+            $0.titleLabel?.text = "test"
             $0.addTarget(self, action: #selector(test(_:)), for: .touchUpInside)
             view.addSubview($0)
             
