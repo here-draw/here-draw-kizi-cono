@@ -215,9 +215,7 @@ class OnboardingViewController: BaseViewController {
                 self.gotoMain()
             }
             else {
-                self.availableNickname = false
-                self.resultLabel.text = message
-                self.resultLabel.isHidden = false
+                self.showToast(message: message)
             }
         }
     }
