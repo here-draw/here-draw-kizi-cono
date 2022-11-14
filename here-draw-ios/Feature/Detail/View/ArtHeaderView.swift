@@ -33,7 +33,7 @@ class ArtHeaderView: BaseView {
     // MARK: - Functions
     
     override func setLayout() {
-        self.backgroundColor = .black1
+        self.backgroundColor = .mediumBlack
         
         thumbnailImageView = UIImageView().then {
             $0.image = UIImage(named: "artDummy2")
@@ -104,6 +104,7 @@ class ArtHeaderView: BaseView {
 
         goArtistHomeButton = UIButton().then {
             $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+            $0.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(weight: .semibold), forImageIn: .normal)
             $0.tintColor = .white
             leftView.addSubview($0)
 
