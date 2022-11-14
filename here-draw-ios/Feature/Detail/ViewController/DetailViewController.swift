@@ -21,17 +21,34 @@ class DetailViewController: BaseViewController {
     private weak var artFooterView: UIView!
     private weak var inquiryFloatingButton: UIButton!
     
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // MARK: - Functions
+    
     override func setLayout() {
+        view.backgroundColor = .black1
+        
+        artFooterView = UIView().then {
+            $0.backgroundColor = .pastelYellow
+            view.addSubview($0)
+            
+            $0.snp.makeConstraints {
+                $0.leading.trailing.bottom.equalToSuperview()
+                $0.height.equalToSuperview().multipliedBy(0.14)
+            }
+        }
+        
         scrollView = UIScrollView().then {
             $0.showsVerticalScrollIndicator = false
             view.addSubview($0)
             
             $0.snp.makeConstraints {
-                $0.edges.equalToSuperview()
+                $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+                $0.bottom.equalTo(artFooterView.snp.top)
             }
         }
         
@@ -67,6 +84,7 @@ class DetailViewController: BaseViewController {
         
         backButton = UIButton().then {
             $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
+            $0.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold), forImageIn: .normal)
             $0.tintColor = .white
             view.addSubview($0)
             
@@ -77,7 +95,9 @@ class DetailViewController: BaseViewController {
         }
         
         rightBarButton = UIButton().then {
-            $0.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+            // TODO: API 연결 후, 내 작품 여부에 따라 아이콘 핸들링
+//            $0.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+            $0.setImage(UIImage(named: "report"), for: .normal)
             $0.tintColor = .white
             view.addSubview($0)
             
@@ -87,19 +107,19 @@ class DetailViewController: BaseViewController {
             }
         }
         
-        artFooterView = UIView().then {
-            $0.backgroundColor = .pastelYellow
-            view.addSubview($0)
-            
-            $0.snp.makeConstraints {
-                $0.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
-                $0.height.equalTo(100)
-            }
-        }
-        
         inquiryFloatingButton = UIButton().then {
-            $0.backgroundColor = .black
-            $0.layer.cornerRadius = $0.frame.height * 0.5
+            $0.backgroundColor = .warmBlue
+            $0.layer.cornerRadius = 50 * 0.5
+            
+            $0.setImage(UIImage(named: "artDM")!, for: .normal)
+            $0.setPreferredSymbolConfiguration(.init(pointSize: 20, weight: .bold), forImageIn: .normal)
+            $0.tintColor = .white
+            
+            $0.setTitle("작품문의", for: .normal)
+            $0.setTitleColor(.white, for: .normal)
+            $0.titleLabel?.font = .systemFont(ofSize: 7)
+            $0.alignTextBelow()
+            
             view.addSubview($0)
             
             $0.snp.makeConstraints {
