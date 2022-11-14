@@ -39,7 +39,7 @@ class DetailViewController: BaseViewController {
             $0.backgroundColor = .greyishMediumBrown
             $0.axis = .vertical
             $0.spacing = 10
-            $0.distribution = .fill
+//            $0.distribution = .fill
             scrollView.addSubview($0)
             
             $0.snp.makeConstraints {
@@ -49,11 +49,10 @@ class DetailViewController: BaseViewController {
         }
         
         artHeaderView = ArtHeaderView().then {
-            $0.backgroundColor = .red
             stackView.addArrangedSubview($0)
             
             $0.snp.makeConstraints {
-                $0.height.equalTo(638)
+                $0.height.equalTo(656)  // 이미지 제외 높이 219
             }
         }
         
@@ -94,7 +93,7 @@ class DetailViewController: BaseViewController {
             
             $0.snp.makeConstraints {
                 $0.leading.trailing.bottom.equalTo(view.safeAreaLayoutGuide)
-                $0.height.equalTo(128)
+                $0.height.equalTo(100)
             }
         }
         
