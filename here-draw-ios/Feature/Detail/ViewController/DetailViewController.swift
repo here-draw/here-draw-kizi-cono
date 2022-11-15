@@ -74,7 +74,7 @@ class DetailViewController: BaseViewController {
         }
         
         artDetailView = ArtDetailView().then {
-            $0.backgroundColor = .green
+//            $0.backgroundColor = .green
             stackView.addArrangedSubview($0)
             
             $0.snp.makeConstraints {
@@ -110,6 +110,11 @@ class DetailViewController: BaseViewController {
         inquiryFloatingButton = UIButton().then {
             $0.backgroundColor = .warmBlue
             $0.layer.cornerRadius = 50 * 0.5
+            $0.shadow(
+                opacity: 0.53,
+                color: .black,
+                offset: .init(width: 0, height: 8)
+            )
             
             $0.setImage(UIImage(named: "artDM")!, for: .normal)
             $0.setPreferredSymbolConfiguration(.init(pointSize: 20, weight: .bold), forImageIn: .normal)
