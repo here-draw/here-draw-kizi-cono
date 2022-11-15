@@ -16,10 +16,11 @@ class StompManager {
     
     // Socket Connection
     func registerSockect() {
+        let jwt = "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWQiOjEsImlhdCI6MTY2ODI3NTQzNCwiZXhwIjoxNjY5NzQ2NjYzfQ.3ZqCZBm9-zkcvy0BWy-6nIqN_YToXJJHXHiQrCQOt6c"
         socketClient.openSocketWithURLRequest(
             request: NSURLRequest(url: url),
             delegate: self,
-            connectionHeaders: ["X-ACCESS-TOKEN" : NetworkUtils.jwt!]
+            connectionHeaders: ["X-ACCESS-TOKEN" : jwt]
         )
     }
     
@@ -27,7 +28,7 @@ class StompManager {
     /// sub가 subscribe prefix이고, 나머지 부분이 Destination
     /// ex) socketClient.subscribe(destination: "/sub/chat/room/"  + chatId)
     func subscribe() {
-        socketClient.subscribe(destination: "pub/chat")
+        socketClient.subscribe(destination: "sub/chat/room/" + "16")
     }
     
     // Publish Message(함수가 실행되면 해당 토픽을 구독중인 클라이언트들이 메시지를 받을 수 있음)
@@ -35,7 +36,7 @@ class StompManager {
     /// ex) toDestination: "/pub/chat/message
     func sendMessage() {
         var payloadObject : [String : Any] = [
-            "roomId": 2,
+            "roomId": 16,
             "senderId": 4,
             "receiverId": 6,
             "message": "안녕하세요 test 메시지입니다."
@@ -43,7 +44,7 @@ class StompManager {
         
         socketClient.sendJSONForDict(
             dict: payloadObject as AnyObject,
-            toDestination: "pub/chat/message")
+            toDestination: "sub/chat/message/")
     }
     
     // Unsubscribe
@@ -84,7 +85,7 @@ extension StompManager : StompClientLibDelegate {
     func stompClientDidConnect(client: StompClientLib!) {
         print("Stomp socket is connected")
         
-//        subscribe()
+        subscribe()
     }
     
     // Error - disconnect and reconnect socket

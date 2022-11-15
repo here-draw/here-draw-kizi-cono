@@ -23,7 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
 //        window?.makeKeyAndVisible()
         
-        LoginAPI.autoLogin(sceneDelegate: self)
+//        LoginAPI.autoLogin(sceneDelegate: self)
+        goToView(viewController: MessageViewController())
     }
     
     func goToView(viewController: UIViewController) {
