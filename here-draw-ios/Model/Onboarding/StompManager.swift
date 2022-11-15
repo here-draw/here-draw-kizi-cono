@@ -18,8 +18,8 @@ class StompManager {
     func registerSockect() {
         socketClient.openSocketWithURLRequest(
             request: NSURLRequest(url: url),
-            delegate: self
-            /*connectionHeaders: ["X-ACCESS-TOKEN" : NetworkUtils.jwt!]*/
+            delegate: self,
+            connectionHeaders: ["X-ACCESS-TOKEN" : NetworkUtils.jwt!]
         )
     }
     
@@ -84,7 +84,7 @@ extension StompManager : StompClientLibDelegate {
     func stompClientDidConnect(client: StompClientLib!) {
         print("Stomp socket is connected")
         
-        subscribe()
+//        subscribe()
     }
     
     // Error - disconnect and reconnect socket
