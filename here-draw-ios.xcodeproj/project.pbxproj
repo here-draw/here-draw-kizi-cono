@@ -21,6 +21,8 @@
 		4F025D9429254D18007A164B /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9329254D18007A164B /* UserAPI.swift */; };
 		4F025D96292551EB007A164B /* OtherArtsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D95292551EB007A164B /* OtherArtsResponse.swift */; };
 		4F025D9929255422007A164B /* OtherArtsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9829255422007A164B /* OtherArtsViewType.swift */; };
+		4F025D9B29255B61007A164B /* RecommendedArtsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9A29255B61007A164B /* RecommendedArtsViewType.swift */; };
+		4F025D9D29255CE4007A164B /* RecommendedArtsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9C29255CE4007A164B /* RecommendedArtsResponse.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
 		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
@@ -86,6 +88,8 @@
 		4F025D9329254D18007A164B /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPI.swift; path = "here-draw-ios/Model/Detail/UserAPI.swift"; sourceTree = SOURCE_ROOT; };
 		4F025D95292551EB007A164B /* OtherArtsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherArtsResponse.swift; sourceTree = "<group>"; };
 		4F025D9829255422007A164B /* OtherArtsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherArtsViewType.swift; sourceTree = "<group>"; };
+		4F025D9A29255B61007A164B /* RecommendedArtsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedArtsViewType.swift; sourceTree = "<group>"; };
+		4F025D9C29255CE4007A164B /* RecommendedArtsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedArtsResponse.swift; sourceTree = "<group>"; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
 		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +178,7 @@
 				4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */,
 				4F025D9129254279007A164B /* ArtistInfoResponse.swift */,
 				4F025D95292551EB007A164B /* OtherArtsResponse.swift */,
+				4F025D9C29255CE4007A164B /* RecommendedArtsResponse.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				4F025D9829255422007A164B /* OtherArtsViewType.swift */,
+				4F025D9A29255B61007A164B /* RecommendedArtsViewType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -665,6 +671,7 @@
 				4F7D9D672921339B00A9ABE1 /* DetailViewController.swift in Sources */,
 				4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */,
 				4F025D9929255422007A164B /* OtherArtsViewType.swift in Sources */,
+				4F025D9B29255B61007A164B /* RecommendedArtsViewType.swift in Sources */,
 				4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */,
 				4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */,
 				4F025D8D2924E12B007A164B /* DetailViewModel.swift in Sources */,
@@ -676,6 +683,7 @@
 				4FF4B4942913D92F0035ED7F /* BaseView.swift in Sources */,
 				4FF4B49A29142FF40035ED7F /* UIImage+Extension.swift in Sources */,
 				4FFB549E2910445B00093E97 /* PinterestLayout.swift in Sources */,
+				4F025D9D29255CE4007A164B /* RecommendedArtsResponse.swift in Sources */,
 				4F025D9429254D18007A164B /* UserAPI.swift in Sources */,
 				4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */,
 				4F025D832924B1E8007A164B /* ArtHashtagTableViewCell.swift in Sources */,

@@ -7,20 +7,20 @@
 
 import Foundation
 
-struct OtherArtsResponse: Decodable {
+struct ArtistArtsResponse: Decodable {
     let isSuccess: Bool
     let code: Int
     let message: String
-    let result: OtherArtsResult?
+    let result: ArtistArtsResult?
 }
 
-struct OtherArtsResult: Decodable {
+struct ArtistArtsResult: Decodable {
     let count: Int
-    let artList: [ArtList]
+    let artList: [ArtistArtList]
 }
 
 // MARK: - ArtList
-struct ArtList: Decodable {
+struct ArtistArtList: Decodable {
     let artId, artistId: Int
     let artImage: String
     let title: String
