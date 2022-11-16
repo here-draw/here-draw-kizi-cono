@@ -11,13 +11,14 @@ class DetailViewController: BaseViewController {
     
     // MARK: - Properties
     
+    
     private weak var backButton: UIButton!
     private weak var rightBarButton: UIButton!  // 내 작품 ? 작품 수정 버튼: 작품 신고 버튼
     
     private weak var scrollView: UIScrollView!
     private weak var stackView: UIStackView!
     private weak var artHeaderView: ArtHeaderView!
-    private weak var artDetailView: ArtDetailView!
+    private weak var containerView: UIView!
     private weak var artFooterView: UIView!
     private weak var inquiryFloatingButton: UIButton!
     
@@ -73,12 +74,20 @@ class DetailViewController: BaseViewController {
             }
         }
         
-        artDetailView = ArtDetailView().then {
-//            $0.backgroundColor = .green
+        containerView = UIView().then {
             stackView.addArrangedSubview($0)
             
+            let detailTablelVC = DetailTableViewController()
+            self.addChild(detailTablelVC)
+            $0.addSubview(detailTablelVC.view)
+            detailTablelVC.didMove(toParent: self)
+            
             $0.snp.makeConstraints {
-                $0.height.equalTo(1519)
+                $0.height.equalTo(1000)
+            }
+            
+            detailTablelVC.view.snp.makeConstraints {
+                $0.edges.equalToSuperview()
             }
         }
         
