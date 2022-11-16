@@ -14,6 +14,9 @@
 		4F025D852924B205007A164B /* ArtistInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D842924B205007A164B /* ArtistInfoTableViewCell.swift */; };
 		4F025D872924B22D007A164B /* ArtsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D862924B22D007A164B /* ArtsTableViewCell.swift */; };
 		4F025D892924B24D007A164B /* ArtsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D882924B24D007A164B /* ArtsCollectionViewCell.swift */; };
+		4F025D8B2924E0F8007A164B /* ArtAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D8A2924E0F8007A164B /* ArtAPI.swift */; };
+		4F025D8D2924E12B007A164B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D8C2924E12B007A164B /* DetailViewModel.swift */; };
+		4F025D902924E2E4007A164B /* ArtInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */; };
 		4F04A9122920814300DBF180 /* OnboardingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9112920814300DBF180 /* OnboardingAPI.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
 		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
@@ -74,6 +77,9 @@
 		4F025D842924B205007A164B /* ArtistInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoTableViewCell.swift; sourceTree = "<group>"; };
 		4F025D862924B22D007A164B /* ArtsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtsTableViewCell.swift; sourceTree = "<group>"; };
 		4F025D882924B24D007A164B /* ArtsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F025D8A2924E0F8007A164B /* ArtAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtAPI.swift; path = "here-draw-ios/Feature/Detail/Cell/ArtAPI.swift"; sourceTree = SOURCE_ROOT; };
+		4F025D8C2924E12B007A164B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtInfoResponse.swift; sourceTree = "<group>"; };
 		4F04A9112920814300DBF180 /* OnboardingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingAPI.swift; path = "here-draw-ios/Feature/Onboarding/OnboardingAPI.swift"; sourceTree = SOURCE_ROOT; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
 		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
@@ -158,6 +164,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		4F025D8E2924E2B9007A164B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		4F04A913292082DF00DBF180 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +240,7 @@
 				4F025D7F2924B196007A164B /* Cell */,
 				4F7D9D68292133AF00A9ABE1 /* View */,
 				4F7D9D69292133B400A9ABE1 /* ViewController */,
+				4F025D8C2924E12B007A164B /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -312,6 +327,7 @@
 			children = (
 				4FE736B1291E325800861A0E /* LoginAPI.swift */,
 				4F04A9112920814300DBF180 /* OnboardingAPI.swift */,
+				4F025D8A2924E0F8007A164B /* ArtAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -457,6 +473,7 @@
 		4FFB548829025EBB00093E97 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F025D8E2924E2B9007A164B /* Detail */,
 				4F04A913292082DF00DBF180 /* Onboarding */,
 				4F5911E4291B6CF100D84018 /* Login */,
 				4FFB548929025ECB00093E97 /* Home */,
@@ -635,7 +652,9 @@
 				4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */,
 				4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */,
 				4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */,
+				4F025D8D2924E12B007A164B /* DetailViewModel.swift in Sources */,
 				4FF2A68028FE4BE000C236C1 /* MessageViewController.swift in Sources */,
+				4F025D902924E2E4007A164B /* ArtInfoResponse.swift in Sources */,
 				4FF2A68428FE4BFD00C236C1 /* WishViewController.swift in Sources */,
 				4F025D872924B22D007A164B /* ArtsTableViewCell.swift in Sources */,
 				4FF4B4942913D92F0035ED7F /* BaseView.swift in Sources */,
@@ -644,6 +663,7 @@
 				4F04A9122920814300DBF180 /* OnboardingAPI.swift in Sources */,
 				4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */,
 				4F025D832924B1E8007A164B /* ArtHashtagTableViewCell.swift in Sources */,
+				4F025D8B2924E0F8007A164B /* ArtAPI.swift in Sources */,
 				4FF2A68228FE4BF000C236C1 /* ArticleViewController.swift in Sources */,
 				4F5911E3291B6CE800D84018 /* AgreementTerms.swift in Sources */,
 				4F5911DC291B6BC100D84018 /* BottomSheetView.swift in Sources */,
