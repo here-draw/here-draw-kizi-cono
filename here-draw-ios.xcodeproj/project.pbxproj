@@ -17,6 +17,7 @@
 		4F025D8B2924E0F8007A164B /* ArtAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D8A2924E0F8007A164B /* ArtAPI.swift */; };
 		4F025D8D2924E12B007A164B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D8C2924E12B007A164B /* DetailViewModel.swift */; };
 		4F025D902924E2E4007A164B /* ArtInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */; };
+		4F025D9229254279007A164B /* ArtistInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9129254279007A164B /* ArtistInfoResponse.swift */; };
 		4F04A9122920814300DBF180 /* OnboardingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9112920814300DBF180 /* OnboardingAPI.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
 		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
@@ -80,6 +81,7 @@
 		4F025D8A2924E0F8007A164B /* ArtAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtAPI.swift; path = "here-draw-ios/Feature/Detail/Cell/ArtAPI.swift"; sourceTree = SOURCE_ROOT; };
 		4F025D8C2924E12B007A164B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtInfoResponse.swift; sourceTree = "<group>"; };
+		4F025D9129254279007A164B /* ArtistInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoResponse.swift; sourceTree = "<group>"; };
 		4F04A9112920814300DBF180 /* OnboardingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingAPI.swift; path = "here-draw-ios/Feature/Onboarding/OnboardingAPI.swift"; sourceTree = SOURCE_ROOT; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
 		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */,
+				4F025D9129254279007A164B /* ArtistInfoResponse.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */,
 				4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */,
 				4F461CE529214743006A8576 /* ArtHeaderView.swift in Sources */,
+				4F025D9229254279007A164B /* ArtistInfoResponse.swift in Sources */,
 				4FFB548029016F4A00093E97 /* HomeTopView.swift in Sources */,
 				4FE736BB291FE0A800861A0E /* OnboardingViewController.swift in Sources */,
 				4FE736B2291E325800861A0E /* LoginAPI.swift in Sources */,
