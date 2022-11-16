@@ -19,6 +19,8 @@
 		4F025D902924E2E4007A164B /* ArtInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */; };
 		4F025D9229254279007A164B /* ArtistInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9129254279007A164B /* ArtistInfoResponse.swift */; };
 		4F025D9429254D18007A164B /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9329254D18007A164B /* UserAPI.swift */; };
+		4F025D96292551EB007A164B /* OtherArtsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D95292551EB007A164B /* OtherArtsResponse.swift */; };
+		4F025D9929255422007A164B /* OtherArtsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9829255422007A164B /* OtherArtsViewType.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
 		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
@@ -82,6 +84,8 @@
 		4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtInfoResponse.swift; sourceTree = "<group>"; };
 		4F025D9129254279007A164B /* ArtistInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoResponse.swift; sourceTree = "<group>"; };
 		4F025D9329254D18007A164B /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserAPI.swift; path = "here-draw-ios/Model/Detail/UserAPI.swift"; sourceTree = SOURCE_ROOT; };
+		4F025D95292551EB007A164B /* OtherArtsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherArtsResponse.swift; sourceTree = "<group>"; };
+		4F025D9829255422007A164B /* OtherArtsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherArtsViewType.swift; sourceTree = "<group>"; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
 		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,8 +173,17 @@
 			children = (
 				4F025D8F2924E2E4007A164B /* ArtInfoResponse.swift */,
 				4F025D9129254279007A164B /* ArtistInfoResponse.swift */,
+				4F025D95292551EB007A164B /* OtherArtsResponse.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		4F025D97292553E0007A164B /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				4F025D9829255422007A164B /* OtherArtsViewType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		4F04A913292082DF00DBF180 /* Onboarding */ = {
@@ -326,6 +339,7 @@
 		4FF2A66F28FD803500C236C1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4F025D97292553E0007A164B /* Enum */,
 				4F025D9329254D18007A164B /* UserAPI.swift */,
 				4F025D8A2924E0F8007A164B /* ArtAPI.swift */,
 			);
@@ -650,12 +664,14 @@
 				4FF2A68628FE4C0B00C236C1 /* MypageViewController.swift in Sources */,
 				4F7D9D672921339B00A9ABE1 /* DetailViewController.swift in Sources */,
 				4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */,
+				4F025D9929255422007A164B /* OtherArtsViewType.swift in Sources */,
 				4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */,
 				4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */,
 				4F025D8D2924E12B007A164B /* DetailViewModel.swift in Sources */,
 				4FF2A68028FE4BE000C236C1 /* MessageViewController.swift in Sources */,
 				4F025D902924E2E4007A164B /* ArtInfoResponse.swift in Sources */,
 				4FF2A68428FE4BFD00C236C1 /* WishViewController.swift in Sources */,
+				4F025D96292551EB007A164B /* OtherArtsResponse.swift in Sources */,
 				4F025D872924B22D007A164B /* ArtsTableViewCell.swift in Sources */,
 				4FF4B4942913D92F0035ED7F /* BaseView.swift in Sources */,
 				4FF4B49A29142FF40035ED7F /* UIImage+Extension.swift in Sources */,

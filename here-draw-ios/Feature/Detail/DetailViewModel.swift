@@ -13,7 +13,7 @@ class DetailViewModel {
     
     private var artInfo: ArtInfoResult?
     private var artistInfo: ArtistInfoResult?
-    private var otherArts: [String: Any] = [:]
+    private var otherArts: OtherArtsResult?
     private var recommendedArts: [String: Any] = [:]
     
     
@@ -37,5 +37,12 @@ class DetailViewModel {
     
     
     // fetch other Arts
+    func fetchOtherArts(artistId: Int, artId: Int) {
+        ArtAPI.artistArts(from: .detailArt(artistId, artId)) { otherArts in
+            self.otherArts = otherArts
+            print(self.otherArts!)
+        }
+    }
+    
     // fetch recommended Arts
 }
