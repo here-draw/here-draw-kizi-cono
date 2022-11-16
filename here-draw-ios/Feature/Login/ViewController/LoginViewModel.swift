@@ -25,7 +25,7 @@ class LoginViewModel {
                     guard let token = oauthToken?.accessToken else { return }
                     print("kakao accessToken: \(token)")
                     
-                    LoginAPI.loginKakao(parameters: LoginRequest(accessToken: token)) { [weak self] response in
+                    UserAPI.loginKakao(parameters: LoginRequest(accessToken: token)) { [weak self] response in
                         print(response)
                         
                         UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
@@ -43,7 +43,7 @@ class LoginViewModel {
     }
     
     func handleAppleLogin(token: String, onCompletion: @escaping (Bool) -> Void) {
-        LoginAPI.loginApple(parameters: LoginRequest(accessToken: token)) { [weak self] response in
+        UserAPI.loginApple(parameters: LoginRequest(accessToken: token)) { [weak self] response in
             print(response)
             
             UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")

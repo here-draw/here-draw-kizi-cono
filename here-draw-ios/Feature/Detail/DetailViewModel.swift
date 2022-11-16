@@ -29,7 +29,7 @@ class DetailViewModel {
     
     // fetch Artist info
     func fetchArtistInfo(artistId: Int) {
-        ArtAPI.artistInfo(artistId: artistId) { artistInfo in
+        UserAPI.artistInfo(artistId: artistId) { artistInfo in
             self.artistInfo = artistInfo
             print(self.artistInfo!)
         }
