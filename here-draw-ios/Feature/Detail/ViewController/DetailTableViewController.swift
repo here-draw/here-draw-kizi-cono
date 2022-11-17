@@ -177,14 +177,13 @@ class DetailTableViewController: BaseViewController {
             
             $0.backgroundColor = .greyishMediumBrown
             $0.showsVerticalScrollIndicator = false
-            $0.isScrollEnabled = true
+            $0.isScrollEnabled = false
             
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .vertical
             $0.collectionViewLayout = layout
             
             for type in DetailTableviewType.allCases {
-//                $0.register(type.cellType, forCellReuseIdentifier: type.cellIdentifier)
                 $0.register(type.cellType, forCellWithReuseIdentifier: type.cellIdentifier)
             }
             
@@ -209,7 +208,7 @@ extension DetailTableViewController: UICollectionViewDelegateFlowLayout, UIColle
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let type = DetailTableviewType(rawValue: indexPath.item)
-        return CGSize(width: collectionView.frame.width, height: type?.height ?? 10)
+        return CGSize(width: collectionView.frame.width, height: type!.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -23,6 +23,11 @@
 		4F025D9929255422007A164B /* OtherArtsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9829255422007A164B /* OtherArtsViewType.swift */; };
 		4F025D9B29255B61007A164B /* RecommendedArtsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9A29255B61007A164B /* RecommendedArtsViewType.swift */; };
 		4F025D9D29255CE4007A164B /* RecommendedArtsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9C29255CE4007A164B /* RecommendedArtsResponse.swift */; };
+		4F025D9F29256E7E007A164B /* ArtHeaderViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D9E29256E7E007A164B /* ArtHeaderViewData.swift */; };
+		4F025DA129257BF5007A164B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DA029257BF5007A164B /* UIView+Extension.swift */; };
+		4F025DA3292580A1007A164B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DA2292580A1007A164B /* UIImageView+Extension.swift */; };
+		4F025DA529258414007A164B /* DynamicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DA429258414007A164B /* DynamicImage.swift */; };
+		4F025DA729262E12007A164B /* SoldoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DA629262E12007A164B /* SoldoutView.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
 		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
@@ -90,6 +95,11 @@
 		4F025D9829255422007A164B /* OtherArtsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherArtsViewType.swift; sourceTree = "<group>"; };
 		4F025D9A29255B61007A164B /* RecommendedArtsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedArtsViewType.swift; sourceTree = "<group>"; };
 		4F025D9C29255CE4007A164B /* RecommendedArtsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedArtsResponse.swift; sourceTree = "<group>"; };
+		4F025D9E29256E7E007A164B /* ArtHeaderViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtHeaderViewData.swift; sourceTree = "<group>"; };
+		4F025DA029257BF5007A164B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		4F025DA2292580A1007A164B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		4F025DA429258414007A164B /* DynamicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicImage.swift; sourceTree = "<group>"; };
+		4F025DA629262E12007A164B /* SoldoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoldoutView.swift; sourceTree = "<group>"; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
 		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +189,7 @@
 				4F025D9129254279007A164B /* ArtistInfoResponse.swift */,
 				4F025D95292551EB007A164B /* OtherArtsResponse.swift */,
 				4F025D9C29255CE4007A164B /* RecommendedArtsResponse.swift */,
+				4F025D9E29256E7E007A164B /* ArtHeaderViewData.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -269,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				4F461CE429214743006A8576 /* ArtHeaderView.swift */,
+				4F025DA629262E12007A164B /* SoldoutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +331,8 @@
 				4FFB549129093EAF00093E97 /* UINavigationItem+Extension.swift */,
 				4FF4B49929142FF40035ED7F /* UIImage+Extension.swift */,
 				4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */,
+				4F025DA029257BF5007A164B /* UIView+Extension.swift */,
+				4F025DA2292580A1007A164B /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -497,6 +511,7 @@
 				4F04A913292082DF00DBF180 /* Onboarding */,
 				4F5911E4291B6CF100D84018 /* Login */,
 				4FFB548929025ECB00093E97 /* Home */,
+				4F025DA429258414007A164B /* DynamicImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -661,6 +676,7 @@
 				4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */,
 				4F461CE529214743006A8576 /* ArtHeaderView.swift in Sources */,
 				4F025D9229254279007A164B /* ArtistInfoResponse.swift in Sources */,
+				4F025DA529258414007A164B /* DynamicImage.swift in Sources */,
 				4FFB548029016F4A00093E97 /* HomeTopView.swift in Sources */,
 				4FE736BB291FE0A800861A0E /* OnboardingViewController.swift in Sources */,
 				4F025D892924B24D007A164B /* ArtsCollectionViewCell.swift in Sources */,
@@ -677,6 +693,7 @@
 				4F025D8D2924E12B007A164B /* DetailViewModel.swift in Sources */,
 				4FF2A68028FE4BE000C236C1 /* MessageViewController.swift in Sources */,
 				4F025D902924E2E4007A164B /* ArtInfoResponse.swift in Sources */,
+				4F025DA729262E12007A164B /* SoldoutView.swift in Sources */,
 				4FF2A68428FE4BFD00C236C1 /* WishViewController.swift in Sources */,
 				4F025D96292551EB007A164B /* OtherArtsResponse.swift in Sources */,
 				4F025D872924B22D007A164B /* ArtsTableViewCell.swift in Sources */,
@@ -684,6 +701,7 @@
 				4FF4B49A29142FF40035ED7F /* UIImage+Extension.swift in Sources */,
 				4FFB549E2910445B00093E97 /* PinterestLayout.swift in Sources */,
 				4F025D9D29255CE4007A164B /* RecommendedArtsResponse.swift in Sources */,
+				4F025D9F29256E7E007A164B /* ArtHeaderViewData.swift in Sources */,
 				4F025D9429254D18007A164B /* UserAPI.swift in Sources */,
 				4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */,
 				4F025D832924B1E8007A164B /* ArtHashtagTableViewCell.swift in Sources */,
@@ -705,6 +723,8 @@
 				4FF2A67128FD806800C236C1 /* NetworkUtils.swift in Sources */,
 				4FE736BD291FE0D500861A0E /* OnboardingViewModel.swift in Sources */,
 				4FF2A68D28FEC4E000C236C1 /* DeviceUtils.swift in Sources */,
+				4F025DA129257BF5007A164B /* UIView+Extension.swift in Sources */,
+				4F025DA3292580A1007A164B /* UIImageView+Extension.swift in Sources */,
 				4FF2A67728FE45B700C236C1 /* TabBarItem.swift in Sources */,
 				4FFB5482290170E300093E97 /* BaseScrollView.swift in Sources */,
 				4FFB549229093EAF00093E97 /* UINavigationItem+Extension.swift in Sources */,

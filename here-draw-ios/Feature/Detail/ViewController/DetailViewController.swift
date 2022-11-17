@@ -10,7 +10,7 @@ import UIKit
 class DetailViewController: BaseViewController {
     
     // MARK: - Properties
-    
+    let viewModel = DetailViewModel()
     
     private weak var backButton: UIButton!
     private weak var rightBarButton: UIButton!  // 내 작품 ? 작품 수정 버튼: 작품 신고 버튼
@@ -20,6 +20,9 @@ class DetailViewController: BaseViewController {
     private weak var artHeaderView: ArtHeaderView!
     private weak var containerView: UIView!
     private weak var artFooterView: UIView!
+    private weak var likeButton: UIButton!
+    private weak var likeCountLabel: UILabel!
+    private weak var buyButton: UIButton!
     private weak var inquiryFloatingButton: UIButton!
     
     // MARK: - View Life Cycle
@@ -30,18 +33,35 @@ class DetailViewController: BaseViewController {
     
     // MARK: - Functions
     
-    override func setLayout() {
-        view.backgroundColor = .black1
+    func updateUI() {
+        // api로부터 받은 데이터로 update 해야할 것들.
         
-        artFooterView = UIView().then {
-            $0.backgroundColor = .pastelYellow
-            view.addSubview($0)
-            
-            $0.snp.makeConstraints {
-                $0.leading.trailing.bottom.equalToSuperview()
-                $0.height.equalToSuperview().multipliedBy(0.14)
-            }
+        // detail VC
+        // - [x] rightButton (myArt) -> 버튼 이미지
+        // like 여부 -> like 하트 색
+        // - [x] like count -> label
+        // - [x] sales -> 구매하기 버튼 색
+        if viewModel.myArt {
+            // TODO: 클릭 시 알럿 내용도 수정하기.
+            let image = UIImage(systemName: "ellipsis")
+            rightBarButton.setImage(image!, for: .normal)
+            // TODO: 메시지, 팔로우 버튼 비활성화
         }
+        likeCountLabel.text = "\(viewModel.likeCount)"
+        
+        if !viewModel.sales {
+            buyButton.backgroundColor = .greyishLightBrown
+        }
+        
+        // artHeaderView
+        artHeaderView.data = viewModel.artHeaderView()
+        
+    }
+    
+    override func setLayout() {
+        view.backgroundColor = .mediumBlack
+        
+        let footerHeight = view.frame.height * 0.14
         
         scrollView = UIScrollView().then {
             $0.showsVerticalScrollIndicator = false
@@ -49,7 +69,8 @@ class DetailViewController: BaseViewController {
             
             $0.snp.makeConstraints {
                 $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-                $0.bottom.equalTo(artFooterView.snp.top)
+//                $0.bottom.equalTo(artFooterView.snp.top)
+                $0.height.equalToSuperview().multipliedBy(1 - 0.14)
             }
         }
         
@@ -57,7 +78,7 @@ class DetailViewController: BaseViewController {
             $0.backgroundColor = .greyishMediumBrown
             $0.axis = .vertical
             $0.spacing = 10
-//            $0.distribution = .fill
+            $0.distribution = .fill
             scrollView.addSubview($0)
             
             $0.snp.makeConstraints {
@@ -83,7 +104,8 @@ class DetailViewController: BaseViewController {
             detailTablelVC.didMove(toParent: self)
             
             $0.snp.makeConstraints {
-                $0.height.equalTo(1000)
+                let height = DeviceUtils.height - DeviceUtils.statusBarHeight - DeviceUtils.navigationBarHeight - footerHeight
+                $0.height.equalTo(height)
             }
             
             detailTablelVC.view.snp.makeConstraints {
@@ -116,11 +138,72 @@ class DetailViewController: BaseViewController {
             }
         }
         
+        artFooterView = UIView().then {
+            $0.backgroundColor = .mediumBlack
+            $0.layer.shadowRadius = 5
+            $0.shadow(
+                opacity: 0.1,
+                color: .black,
+                offset: .init(width: 0, height: -10)
+            )
+            view.addSubview($0)
+            
+            $0.snp.makeConstraints {
+                $0.leading.trailing.bottom.equalToSuperview()
+                $0.height.equalToSuperview().multipliedBy(0.14)
+            }
+        }
+        
+        buyButton = UIButton().then {
+            $0.backgroundColor = .pastelYellow
+            $0.layer.cornerRadius = 10
+            
+            $0.setTitle("구매하기", for: .normal)
+            $0.setTitleColor(.mediumBlack, for: .normal)
+            $0.titleLabel?.font = .sfPro22Pt
+            
+            artFooterView.addSubview($0)
+            
+            $0.snp.makeConstraints {
+                $0.top.equalToSuperview().inset(17)
+                $0.trailing.equalToSuperview().inset(20)
+                $0.width.equalToSuperview().multipliedBy(0.74)
+                $0.height.equalToSuperview().multipliedBy(0.45)
+            }
+        }
+        
+        likeButton = UIButton().then {
+            $0.setImage(UIImage(named: "heart"), for: .normal)
+            $0.setImage(UIImage(named: "heart.fill"), for: .selected)
+            $0.tintColor = $0.isSelected ? .grapefruit: .white
+            artFooterView.addSubview($0)
+            
+            $0.snp.makeConstraints {
+                $0.top.equalTo(buyButton.snp.top).offset(7)
+                $0.leading.equalToSuperview().inset(34)
+                $0.width.equalTo(buyButton.snp.height).multipliedBy(0.45)
+                $0.height.equalTo(buyButton.snp.height).multipliedBy(0.45)
+            }
+        }
+        
+        likeCountLabel = UILabel().then {
+            $0.text = "3.1k"
+            $0.font = .sfPro14Pt2
+            $0.textColor = .white
+            artFooterView.addSubview($0)
+            
+            $0.snp.makeConstraints {
+                $0.top.equalTo(likeButton.snp.bottom).offset(3)
+                $0.bottom.equalTo(buyButton.snp.bottom).offset(-6).priority(.medium)
+                $0.centerX.equalTo(likeButton.snp.centerX)
+            }
+        }
+        
         inquiryFloatingButton = UIButton().then {
             $0.backgroundColor = .warmBlue
             $0.layer.cornerRadius = 50 * 0.5
             $0.shadow(
-                opacity: 0.53,
+                opacity: 0.15,
                 color: .black,
                 offset: .init(width: 0, height: 8)
             )

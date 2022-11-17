@@ -12,6 +12,12 @@ class ArtHeaderView: BaseView {
     
     // MARK: - Properties
     
+    public var data: ArtHeaderViewData? {
+        didSet {
+            updateUI()
+        }
+    }
+    
     private weak var stackView: UIStackView!
     private weak var leftView: UIView!
     private weak var rightView: UIView!
@@ -29,8 +35,40 @@ class ArtHeaderView: BaseView {
     private weak var fileTypeButton3: UIButton!
     
     private weak var watermarkLabel: UILabel!
+    public weak var soldoutView: SoldoutView!
     
     // MARK: - Functions
+    
+    private func updateUI() {
+        if let data = self.data {
+            thumbnailImageView.loadImage(url: data.artImage)
+            let thumbnailImage = DynamicImage(width: data.width, height: data.height)
+            let height = DeviceUtils.calculateImageHeight(sourceImage: thumbnailImage, scaledToWidth: DeviceUtils.width)
+            thumbnailImageView.snp.updateConstraints {
+                $0.height.equalTo(height)
+            }
+            
+            soldoutView.isHidden = !data.sales ? true: false
+            
+            titleLabel.text = data.title
+            priceLabel.text = "\(data.price)"
+            simpleDescriptionLabel.text = data.simpleDescription
+            
+            switch data.filetype.count {
+            case 1:
+                fileTypeButton1.setTitle(data.filetype.first!, for: .normal)
+                fileTypeButton2.isHidden = true
+                fileTypeButton3.isHidden = true
+            case 2:
+                fileTypeButton1.setTitle(data.filetype.first!, for: .normal)
+                fileTypeButton2.setTitle(data.filetype.last!, for: .normal)
+                fileTypeButton3.isHidden = true
+            default:
+                fileTypeButton1.setTitle(data.filetype.first!, for: .normal)
+                fileTypeButton2.setTitle(data.filetype[1], for: .normal)
+            }
+        }
+    }
     
     override func setLayout() {
         self.backgroundColor = .mediumBlack
@@ -231,6 +269,15 @@ class ArtHeaderView: BaseView {
             $0.snp.makeConstraints {
                 $0.trailing.equalTo(thumbnailImageView.snp.trailing).offset(-18)
                 $0.bottom.equalTo(thumbnailImageView.snp.bottom).offset(-12)
+            }
+        }
+        
+        soldoutView = SoldoutView().then {
+            $0.isHidden = true
+            self.addSubview($0)
+            
+            $0.snp.makeConstraints {
+                $0.edges.equalTo(thumbnailImageView.snp.edges)
             }
         }
     }
