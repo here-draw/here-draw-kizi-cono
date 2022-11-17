@@ -24,7 +24,7 @@ struct ArtInfoResult: Decodable {
     let exclusive: Bool
     let additionalCharge: Int
     let simpleDescription, description: String
-    let like: Int
+    let likeCount: Int
     let filetype, copyright, tag: [String]
-    let sales, myArt: Bool
+    let likes, sales, myArt: Bool
 }
