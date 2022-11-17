@@ -9,12 +9,6 @@ import UIKit
 
 extension UIButton {
     
-    func shadow(opacity: Float, color: UIColor, offset: CGSize) {
-        self.layer.shadowOpacity = opacity
-        self.layer.shadowColor = color.cgColor
-        self.layer.shadowOffset = offset
-    }
-    
     func removeShadow() {
         self.layer.shadowOpacity = 0
     }
