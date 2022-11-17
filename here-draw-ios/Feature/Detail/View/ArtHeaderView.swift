@@ -48,7 +48,7 @@ class ArtHeaderView: BaseView {
                 $0.height.equalTo(height)
             }
             
-            soldoutView.isHidden = !data.sales ? true: false
+            soldoutView.isHidden = data.sales ? true: false
             
             titleLabel.text = data.title
             priceLabel.text = "\(data.price)"
