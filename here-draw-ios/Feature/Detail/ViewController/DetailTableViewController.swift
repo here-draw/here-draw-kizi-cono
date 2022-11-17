@@ -37,7 +37,7 @@ extension DetailTableViewController {
         
         var height: CGFloat {
             switch self {
-            case .artInfo: return 406   // 펼쳤을 때, 534
+            case .artInfo: return 580   // 펼쳤을 때, 534
             case .artHashtag: return 151
             case .artistInfo: return 253
             case .otherArts: return 245
@@ -177,7 +177,7 @@ class DetailTableViewController: BaseViewController {
             
             $0.backgroundColor = .greyishMediumBrown
             $0.showsVerticalScrollIndicator = false
-            $0.isScrollEnabled = false
+            $0.isScrollEnabled = true
             
             let layout = UICollectionViewFlowLayout()
             layout.scrollDirection = .vertical

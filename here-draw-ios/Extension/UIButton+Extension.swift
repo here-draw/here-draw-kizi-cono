@@ -27,4 +27,16 @@ extension UIButton {
         titleEdgeInsets = UIEdgeInsets(top: spacing, left: -image.size.width, bottom: -image.size.height, right: 0)
         imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + spacing), left: 0, bottom: 0, right: -titleSize.width)
     }
+    
+    func titleLabelWidth() -> CGFloat {
+        guard let titleLabel = self.titleLabel else { return 0 }
+        
+        guard let titleText = titleLabel.text else { return 0 }
+        
+        let titleSize = titleText.size(withAttributes: [
+            NSAttributedString.Key.font : titleLabel.font as Any
+        ])
+        
+        return titleSize.width
+    }
 }
