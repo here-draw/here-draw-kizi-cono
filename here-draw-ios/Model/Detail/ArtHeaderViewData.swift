@@ -15,4 +15,6 @@ struct ArtHeaderViewData {
     let price: Int
     let filetype: [String]
     let sales: Bool
+    let profileImage: String?
+    let nickname: String
 }

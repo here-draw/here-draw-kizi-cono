@@ -67,6 +67,11 @@ class ArtHeaderView: BaseView {
                 fileTypeButton1.setTitle(data.filetype.first!, for: .normal)
                 fileTypeButton2.setTitle(data.filetype[1], for: .normal)
             }
+            
+            if let profileImage = data.profileImage {
+                profileImageView.loadImage(url: profileImage)
+            }
+            nicknameLabel.text = data.nickname
         }
     }
     
@@ -115,7 +120,7 @@ class ArtHeaderView: BaseView {
         }
         
         profileImageView = UIImageView().then {
-            $0.backgroundColor = .green
+            $0.image = UIImage(named: "profile")
             $0.layer.masksToBounds = true
             $0.clipsToBounds = true
             $0.layer.cornerRadius = 43 * 0.5

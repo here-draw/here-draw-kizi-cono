@@ -11,6 +11,7 @@ class DetailViewController: BaseViewController {
     
     // MARK: - Properties
     let viewModel = DetailViewModel()
+    public let detailTablelVC = DetailTableViewController()
     
     private weak var backButton: UIButton!
     private weak var rightBarButton: UIButton!  // 내 작품 ? 작품 수정 버튼: 작품 신고 버튼
@@ -29,6 +30,7 @@ class DetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
     
     // MARK: - Functions
@@ -38,7 +40,7 @@ class DetailViewController: BaseViewController {
         
         // detail VC
         // - [x] rightButton (myArt) -> 버튼 이미지
-        // like 여부 -> like 하트 색
+        // - [x] like 여부 -> like 하트 색
         // - [x] like count -> label
         // - [x] sales -> 구매하기 버튼 색
         if viewModel.myArt {
@@ -51,7 +53,10 @@ class DetailViewController: BaseViewController {
         
         if !viewModel.sales {
             buyButton.backgroundColor = .greyishLightBrown
+            buyButton.isEnabled = false
         }
+        
+        likeButton.isSelected = viewModel.likes ? true: false
         
         // artHeaderView
         artHeaderView.data = viewModel.artHeaderView()
@@ -98,7 +103,6 @@ class DetailViewController: BaseViewController {
         containerView = UIView().then {
             stackView.addArrangedSubview($0)
             
-            let detailTablelVC = DetailTableViewController()
             self.addChild(detailTablelVC)
             $0.addSubview(detailTablelVC.view)
             detailTablelVC.didMove(toParent: self)
@@ -130,6 +134,7 @@ class DetailViewController: BaseViewController {
 //            $0.setImage(UIImage(systemName: "ellipsis"), for: .normal)
             $0.setImage(UIImage(named: "report"), for: .normal)
             $0.tintColor = .white
+            $0.addTarget(self, action: #selector(barButtonSelected(_:)), for: .touchUpInside)
             view.addSubview($0)
             
             $0.snp.makeConstraints {
@@ -225,6 +230,37 @@ class DetailViewController: BaseViewController {
                 $0.width.height.equalTo(50)
             }
         }
+    }
+    
+    // MARK: - objc func
+    @objc
+    func barButtonSelected(_ sender: UIButton) {
+        if viewModel.myArt {
+            let alert = UIAlertController(title: "메뉴", message: nil, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "수정", style: .default, handler: { _ in
+                // TODO: 작품 수정 화면으로 이동
+            }))
+            alert.addAction(UIAlertAction(title: "삭제", style: .default, handler: { _ in
+                // TODO: 작품 삭제
+            }))
+            alert.addAction(UIAlertAction(title: "취소", style: .cancel))
+            
+            self.present(alert,animated: true)
+        }
+        else {
+            let alert = UIAlertController(title: "신고 사유 선택", message: nil, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "유출/사칭/사기", style: .default, handler: reportHandler))
+            alert.addAction(UIAlertAction(title: "욕설/비하", style: .default, handler: reportHandler))
+            alert.addAction(UIAlertAction(title: "음란물", style: .default, handler: reportHandler))
+            alert.addAction(UIAlertAction(title: "기타", style: .default, handler: reportHandler))
+            alert.addAction(UIAlertAction(title: "취소", style: .cancel))
+            
+            self.present(alert,animated: true)
+        }
+    }
+    
+    let reportHandler: (UIAlertAction) -> Void = { action in
+        print(action.title)
     }
 }
 

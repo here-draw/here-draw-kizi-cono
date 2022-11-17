@@ -16,18 +16,33 @@ class DetailViewModel {
     private var otherArts: ArtistArtsResult?
     private var recommendedArts: [RecommendedArtsResult]?
     
+    private var fetchDone = [Bool](repeating: false, count: 4)
+    
     public var sales: Bool = false
     public var myArt: Bool = false
+    public var likes: Bool = false
     public var likeCount: Int = 0
     
     
     // MARK: - Functions
     
-    func fetchData(artId: Int, artistId: Int) {
-//        fetchArtInfo(artId: artId)
-        fetchArtistInfo(artistId: artistId)
-        fetchOtherArts(artistId: artistId, artId: artId)
-        fetchRecommendedArts(artId: artId)
+    func fetchData(artId: Int, artistId: Int, onCompletion: @escaping (() -> Void)) {
+        fetchArtInfo(artId: artId) {
+            self.fetchDone[0] = true
+            if self.fetchDone.allSatisfy({ $0 == true }) { onCompletion() }
+        }
+        fetchArtistInfo(artistId: artistId) {
+            self.fetchDone[1] = true
+            if self.fetchDone.allSatisfy({ $0 == true }) { onCompletion() }
+        }
+        fetchOtherArts(artistId: artistId, artId: artId) {
+            self.fetchDone[2] = true
+            if self.fetchDone.allSatisfy({ $0 == true }) { onCompletion() }
+        }
+        fetchRecommendedArts(artId: artId) {
+            self.fetchDone[3] = true
+            if self.fetchDone.allSatisfy({ $0 == true }) { onCompletion() }
+        }
     }
     
     // fetch Art info
@@ -37,34 +52,37 @@ class DetailViewModel {
             print(self.artInfo!)
             self.sales = artInfo.sales
             self.myArt = artInfo.myArt
-            print(artInfo.like)
-            self.likeCount = artInfo.like
+            self.likes = artInfo.likes
+            self.likeCount = artInfo.likeCount
             onCompletion()
         }
     }
     
     // fetch Artist info
-    func fetchArtistInfo(artistId: Int) {
+    func fetchArtistInfo(artistId: Int, onCompletion: @escaping (() -> Void)) {
         UserAPI.artistInfo(artistId: artistId) { artistInfo in
             self.artistInfo = artistInfo
             print(self.artistInfo!)
+            onCompletion()
         }
     }
     
     
     // fetch other Arts
-    func fetchOtherArts(artistId: Int, artId: Int) {
+    func fetchOtherArts(artistId: Int, artId: Int, onCompletion: @escaping (() -> Void)) {
         ArtAPI.artistArts(from: .detailArt(artistId, artId)) { otherArts in
             self.otherArts = otherArts
             print(self.otherArts!)
+            onCompletion()
         }
     }
     
     // fetch recommended Arts
-    func fetchRecommendedArts(artId: Int) {
+    func fetchRecommendedArts(artId: Int, onCompletion: @escaping (() -> Void)) {
         ArtAPI.recommendedArts(from: .detailArt(artId)) { recommendedArts in
             self.recommendedArts = recommendedArts
             print(self.recommendedArts!)
+            onCompletion()
         }
     }
     
@@ -78,7 +96,9 @@ class DetailViewModel {
             simpleDescription: artInfo!.simpleDescription,
             price: artInfo!.price,
             filetype: artInfo!.filetype,
-            sales: artInfo!.sales
+            sales: artInfo!.sales,
+            profileImage: artistInfo!.profileImg,
+            nickname: artistInfo!.nickname
         )
     }
 }
