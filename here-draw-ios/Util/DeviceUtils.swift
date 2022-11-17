@@ -38,7 +38,7 @@ final class DeviceUtils {
         return UINavigationController().navigationBar.frame.height
     }
     
-    static public func calculateImageHeight(sourceImage: AnyObject, scaledToWidth: CGFloat) -> CGFloat {
+    static public func calculateImageHeight(sourceImage: DynamicImage, scaledToWidth: CGFloat) -> CGFloat {
         let oldWidth = CGFloat(sourceImage.width)
         let scaleFactor = scaledToWidth / oldWidth
         let newHeight = CGFloat(sourceImage.height) * scaleFactor
