@@ -22,7 +22,7 @@ class MypageViewController: TabmanViewController {
         let buttonView = UIButton()
         //aImageView.backgroundColor = .red
         buttonView.setImage(UIImage(named: "settings"), for: .normal)
-        buttonView.addTarget(MypageViewController.self, action: #selector(goSetting), for: .touchUpInside)
+        buttonView.addTarget(self, action: #selector(goSetting(_:)), for: .touchUpInside)
         return buttonView
     }()
     func buttonViewsetup() {
@@ -35,8 +35,10 @@ class MypageViewController: TabmanViewController {
     }
     
 
-    @objc func goSetting() {
-        let nextVC = SettingViewController()
+    @objc func goSetting(_ sender: UIButton) {
+        
+        let nextVC = SettingAllViewController()
+        
         navigationController?.pushViewController(nextVC, animated: true)
     }
     

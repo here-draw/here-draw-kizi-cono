@@ -20,7 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene) // SceneDelegate의 프로퍼티에 설정해줌
-        let mainViewController = SettingAllViewController() // 맨 처음 보여줄 ViewController
+        let mainViewController = ArticleInfoController() // 맨 처음 보여줄 ViewController
+        
+        
+        
         
         let navigationController = UINavigationController(rootViewController : mainViewController)
         // NavigationController에 처음으로 보여질 화면을 rootView로 지정

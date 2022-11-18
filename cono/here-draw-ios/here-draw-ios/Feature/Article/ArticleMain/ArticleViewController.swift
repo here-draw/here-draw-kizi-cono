@@ -87,6 +87,27 @@ class ArticleViewController: UIViewController {
         self.view.backgroundColor = .black1
         setNavigationBar()
         collectionViewsetup()
+        
+        
+//        ArticleAPI.article { [weak self] response in
+//            guard let string = response?.result?.thumbnailImage as? String else { return }
+//            let url = URL(string: string)
+//            
+//            DispatchQueue.main.async {
+//                //self?.imageView.kf.setImage(with: url!)
+//                //self?.images[0] = response?.result?.thumbnailImage ?? ""
+//                self?.images
+//                self?.names[0] = response?.result?.articleTitle ?? ""
+//                self?.names[1] = response?.result?.artistName ?? ""
+//                self?.names[2] = response?.result?.description ?? ""
+//                //self?.textField2.text = response?.result?.description
+//            }
+//        }
+//        
+        
+        
+        
+        
     }
     
 
@@ -124,8 +145,17 @@ extension ArticleViewController : UICollectionViewDelegate, UICollectionViewDele
         
         
         return CGSize(width: 300, height: 170)
+        //return CGSize(width: 400, height: 270)
+
     }
 }
+
+
+
+
+
+
+
 
 
 struct ViewControllerRepresentable1: UIViewControllerRepresentable {

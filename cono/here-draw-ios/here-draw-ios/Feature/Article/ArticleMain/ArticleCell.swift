@@ -15,6 +15,7 @@ class ArticleCell: UICollectionViewCell {
     var img = UIImageView().then {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.image = UIImage(named: "네모.png")
+        
     }
 
     var label = UILabel().then {
@@ -47,14 +48,21 @@ class ArticleCell: UICollectionViewCell {
         self.addSubview(label2)
         self.addSubview(label3)
         
+        
         img.contentMode = .left
-        img.contentMode = .scaleAspectFit
+        img.contentMode = .scaleAspectFill
+        img.clipsToBounds = true
+        img.layer.cornerRadius = 10
+        //img.layer.borderColor = CGColor(red: 233.0/255.0, green: 254.0/255.0, blue: 134.0/255.0, alpha: 1.0)
+        //img.layer.borderWidth = 5
+        //img.backgroundColor = .red
         img.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.top.equalToSuperview()
             $0.bottom.equalToSuperview()
-    
+            $0.width.height.equalTo(160)
         }
+        
         label.snp.makeConstraints {
             $0.leading.equalTo(img.snp.trailing).offset(17)
         }

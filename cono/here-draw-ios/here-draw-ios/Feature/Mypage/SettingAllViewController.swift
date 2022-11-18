@@ -60,14 +60,14 @@ class SettingAllViewController: UIViewController {
         tableView.register(SettingCell.self, forCellReuseIdentifier: SettingCell.identifier)
         return tableView
     }()
-
     
     
     
     
     
     
-
+    
+    
     
     let title2Label: UILabel = {
         let label = UILabel()
@@ -85,7 +85,7 @@ class SettingAllViewController: UIViewController {
         }
     }
     
-
+    
     
     private let table2View : UITableView = { // 테이블 뷰 생성
         let table2View = UITableView()
@@ -114,7 +114,7 @@ class SettingAllViewController: UIViewController {
         }
     }
     
-
+    
     
     private let table3View : UITableView = { // 테이블 뷰 생성
         let table3View = UITableView()
@@ -126,6 +126,44 @@ class SettingAllViewController: UIViewController {
     
     
     
+    func logout() {
+        let alert = UIAlertController(title:"로그아웃 하시겠습니까?",
+                                      message: "",
+                                      preferredStyle: UIAlertController.Style.alert)
+        //2. 확인 버튼 만들기
+        let cancle = UIAlertAction(title: "취소", style: .default, handler: nil)
+        //3. 확인 버튼을 경고창에 추가하기
+        alert.addAction(cancle)
+        
+        let ok = UIAlertAction(title: "로그아웃", style: .destructive, handler: {
+            action in
+            //특정기능 수행
+        })
+        alert.addAction(ok)
+        //4. 경고창 보이기
+        present(alert,animated: true,completion: nil)
+        
+    }
+    
+    
+    func goOut() {
+        let alert = UIAlertController(title:"탈퇴 후엔 보유하고 있던 정보, 구매 이력 등은 모두 소멸되며 복구는 불가능합니다.",
+                                      message: "정말 떠나시겠습니까?",
+                                      preferredStyle: UIAlertController.Style.alert)
+        //2. 확인 버튼 만들기
+        let cancle = UIAlertAction(title: "떠나기", style: .default, handler: nil)
+        //3. 확인 버튼을 경고창에 추가하기
+        alert.addAction(cancle)
+        
+        let ok = UIAlertAction(title: "나중에", style: .destructive, handler: {
+            action in
+            //특정기능 수행
+        })
+        alert.addAction(ok)
+        //4. 경고창 보이기
+        present(alert,animated: true,completion: nil)
+        
+    }
     
     
     
@@ -237,7 +275,7 @@ extension SettingAllViewController : UITableViewDataSource {
         } else {
             return 3
         }
-            
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -264,7 +302,7 @@ extension SettingAllViewController : UITableViewDataSource {
             background.backgroundColor = .clear
             cell.selectedBackgroundView = background
             return cell
-
+            
         }
         
     }
@@ -274,8 +312,38 @@ extension SettingAllViewController : UITableViewDataSource {
 
 extension SettingAllViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        print("select \(indexPath.row)")
+        
+        if tableView == table2View {
+            if indexPath.row == 0 {
+                print("스위치 버튼 On or OFF")
+            }
+        }
+        else if tableView == table3View {
+            if indexPath.row == 0 {
+                let nextVC = ServiceView()
+                navigationController?.pushViewController(nextVC, animated: true)
+            }
+            
+            
+        } else {
+            if indexPath.row == 0 {
+                let nextVC = SettingViewController()
+                navigationController?.pushViewController(nextVC, animated: true)
+            }
+            
+            
+            else if indexPath.row == 1 {
+                logout()
+            }
+            
+            else {
+                goOut()
+            }
+        }
+        
+        
+        
+        
     }
 }
 
