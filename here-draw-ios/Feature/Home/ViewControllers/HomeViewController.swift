@@ -8,17 +8,13 @@
 import UIKit
 
 import ImageSlideshow
+import Kingfisher
 import SnapKit
 import Then
 
 class HomeViewController: BaseViewController {
     // MARK: - Properties
-    
-    let bannerImages = [
-            UIImage(named: "poster")!,
-            UIImage(named: "poster")!,
-            UIImage(named: "poster")!
-        ]
+    let viewModel = HomeViewModel()
     
     private weak var scrollView: UIScrollView!
     private weak var stackView: UIStackView!
@@ -27,15 +23,38 @@ class HomeViewController: BaseViewController {
 
     // MARK: - View Life Cycle
     
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.fetchBanners() {
+            self.updateUI()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initNavigationBar()
         setNavigationBar()
-        fetchBanner(images: bannerImages)
         setCategories()
     }
     
     // MARK: - Functions
+    
+    func updateUI() {
+        // banner update
+        guard let banners = viewModel.articleBanners else { return }
+        
+        for banner in banners {
+            let url = URL(string: banner.bannerImage)
+            KingfisherManager.shared.retrieveImage(with: url!, completionHandler: { result in
+                switch result {
+                case .success(let imageResult):
+                    let image = imageResult.image
+                    self.homeTopView.banners.append(ImageSource(image: image))
+                case .failure(let error):
+                    print("배너 이미지 로드 에러: \(error)")
+                }
+            })
+        }
+    }
     
     override func setNavigationBar() {
         let naviBar = NavigationBarView(frame: CGRect(x: 0, y: DeviceUtils.statusBarHeight, width: DeviceUtils.width, height: 60))
@@ -126,13 +145,6 @@ class HomeViewController: BaseViewController {
     private func getCategories() -> [String] {
         // TODO: API fetch category (차후 뷰모델로 옮기기)
         return ["전체", "캐릭터", "풍경화", "만화", "인물화", "기타"]
-    }
-    
-    private func fetchBanner(images: [UIImage]) {
-        // TODO: API fetch banner (차후 뷰모델로 옮기기)
-        images.forEach {
-            homeTopView.banners.append(ImageSource(image: $0))
-        }
     }
 }
 

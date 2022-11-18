@@ -36,6 +36,10 @@
 		4F025DB52926BB94007A164B /* RecommendedArtsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DB42926BB94007A164B /* RecommendedArtsData.swift */; };
 		4F025DB72926D786007A164B /* OtherArtsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DB62926D786007A164B /* OtherArtsTableViewCell.swift */; };
 		4F025DB92926D87D007A164B /* RecommendedArtsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DB82926D87D007A164B /* RecommendedArtsTableViewCell.swift */; };
+		4F025DBB2927A678007A164B /* ArticleCompilationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DBA2927A678007A164B /* ArticleCompilationAPI.swift */; };
+		4F025DBE2927AB74007A164B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DBD2927AB74007A164B /* SplashViewController.swift */; };
+		4F025DC02927C03D007A164B /* ArticleBannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DBF2927C03D007A164B /* ArticleBannerResponse.swift */; };
+		4F025DC22927C1A1007A164B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DC12927C1A1007A164B /* HomeViewModel.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
 		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
@@ -116,6 +120,10 @@
 		4F025DB42926BB94007A164B /* RecommendedArtsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedArtsData.swift; sourceTree = "<group>"; };
 		4F025DB62926D786007A164B /* OtherArtsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherArtsTableViewCell.swift; sourceTree = "<group>"; };
 		4F025DB82926D87D007A164B /* RecommendedArtsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedArtsTableViewCell.swift; sourceTree = "<group>"; };
+		4F025DBA2927A678007A164B /* ArticleCompilationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCompilationAPI.swift; sourceTree = "<group>"; };
+		4F025DBD2927AB74007A164B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		4F025DBF2927C03D007A164B /* ArticleBannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleBannerResponse.swift; sourceTree = "<group>"; };
+		4F025DC12927C1A1007A164B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
 		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +232,14 @@
 				4F025D9A29255B61007A164B /* RecommendedArtsViewType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		4F025DBC2927AB56007A164B /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				4F025DBD2927AB74007A164B /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		4F04A913292082DF00DBF180 /* Onboarding */ = {
@@ -385,6 +401,7 @@
 				4F025D97292553E0007A164B /* Enum */,
 				4F025D9329254D18007A164B /* UserAPI.swift */,
 				4F025D8A2924E0F8007A164B /* ArtAPI.swift */,
+				4F025DBA2927A678007A164B /* ArticleCompilationAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -401,6 +418,7 @@
 		4FF2A67328FD82B200C236C1 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				4F025DBC2927AB56007A164B /* Splash */,
 				4FF2A68728FE4C1300C236C1 /* Common */,
 				4FE736B9291FDF4A00861A0E /* Onboarding */,
 				4FF4B49B291646050035ED7F /* Login */,
@@ -453,6 +471,7 @@
 				4FFB547928FFEF6100093E97 /* Cell */,
 				4FFB547028FF9EC100093E97 /* View */,
 				4FFB547128FF9ECE00093E97 /* ViewControllers */,
+				4F025DC12927C1A1007A164B /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -544,6 +563,7 @@
 			isa = PBXGroup;
 			children = (
 				4FFB548A29025EE200093E97 /* HomeArtModel.swift */,
+				4F025DBF2927C03D007A164B /* ArticleBannerResponse.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -709,11 +729,13 @@
 				4F025D892924B24D007A164B /* ArtsCollectionViewCell.swift in Sources */,
 				4FFB548B29025EE200093E97 /* HomeArtModel.swift in Sources */,
 				4FFB547828FFB77400093E97 /* PagerTab.swift in Sources */,
+				4F025DC02927C03D007A164B /* ArticleBannerResponse.swift in Sources */,
 				4F025DB32926BB27007A164B /* ArtsData.swift in Sources */,
 				4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */,
 				4FF2A68628FE4C0B00C236C1 /* MypageViewController.swift in Sources */,
 				4F7D9D672921339B00A9ABE1 /* DetailViewController.swift in Sources */,
 				4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */,
+				4F025DBB2927A678007A164B /* ArticleCompilationAPI.swift in Sources */,
 				4F025D9929255422007A164B /* OtherArtsViewType.swift in Sources */,
 				4F025D9B29255B61007A164B /* RecommendedArtsViewType.swift in Sources */,
 				4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */,
@@ -758,6 +780,8 @@
 				4F025DAF2926B987007A164B /* ArtHashtagData.swift in Sources */,
 				4FF2A67728FE45B700C236C1 /* TabBarItem.swift in Sources */,
 				4F025DB92926D87D007A164B /* RecommendedArtsTableViewCell.swift in Sources */,
+				4F025DBE2927AB74007A164B /* SplashViewController.swift in Sources */,
+				4F025DC22927C1A1007A164B /* HomeViewModel.swift in Sources */,
 				4FFB5482290170E300093E97 /* BaseScrollView.swift in Sources */,
 				4FFB549229093EAF00093E97 /* UINavigationItem+Extension.swift in Sources */,
 				4F5911E1291B6C5D00D84018 /* AgreeBottomSheetView.swift in Sources */,

@@ -23,12 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         goToView(viewController: SplashViewController())
 //        let vc = DetailViewController()
-//        vc.viewModel.fetchData(artId: 2, artistId: 1) {
+//        vc.viewModel.fetchData(artId: 7, artistId: 4) {
 //            self.goToView(viewController: vc)
 //        }
-//        vc.viewModel.fetchData(artId: 25, artistId: 4) {
-//            self.goToView(viewController: vc)
-//        }
+
     }
     
     func goToView(viewController: UIViewController) {
