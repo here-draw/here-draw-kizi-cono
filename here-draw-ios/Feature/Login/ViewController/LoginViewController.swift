@@ -204,7 +204,7 @@ class LoginViewController: BaseViewController {
     func kakaoLoginTapped() {
         viewModel.handleKakaoLogin { [weak self] hasNickname in
             if hasNickname {
-                self?.gotoMain()
+                self?.goToMain()
             } else {    // 최초 로그인
                 self?.presentBottomSheet()
             }
@@ -315,7 +315,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
             
             viewModel.handleAppleLogin(token: tokenString!) { [weak self] hasNickname in
                 if hasNickname {
-                    self?.gotoMain()
+                    self?.goToMain()
                 } else {
                     self?.presentBottomSheet()
                 }

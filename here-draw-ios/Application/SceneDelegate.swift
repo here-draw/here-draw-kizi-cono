@@ -21,11 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
         
-//        UserAPI.autoLogin(sceneDelegate: self)
-        let vc = DetailViewController()
-        vc.viewModel.fetchData(artId: 2, artistId: 1) {
-            self.goToView(viewController: vc)
-        }
+        goToView(viewController: SplashViewController())
+//        let vc = DetailViewController()
+//        vc.viewModel.fetchData(artId: 2, artistId: 1) {
+//            self.goToView(viewController: vc)
+//        }
 //        vc.viewModel.fetchData(artId: 25, artistId: 4) {
 //            self.goToView(viewController: vc)
 //        }
@@ -33,20 +33,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func goToView(viewController: UIViewController) {
         self.window?.rootViewController = viewController
-        self.window?.makeKeyAndVisible()
-    }
-    
-    func goToMain() {
-        let rootVC = UINavigationController(rootViewController: TabBarController())
-        
-        self.window?.rootViewController = rootVC
-        self.window?.makeKeyAndVisible()
-    }
-    
-    func goToLogin() {
-        let rootVC = UINavigationController(rootViewController: LoginViewController())
-        
-        self.window?.rootViewController = rootVC
         self.window?.makeKeyAndVisible()
     }
 

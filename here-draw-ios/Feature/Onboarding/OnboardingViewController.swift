@@ -212,7 +212,7 @@ class OnboardingViewController: BaseViewController {
         guard let nickname = nicknameTextField.text else { return }
         viewModel.setNickname(nickname: nickname) { (isSuccess, message) in
             if isSuccess {
-                self.gotoMain()
+                self.goToMain()
             }
             else {
                 self.showToast(message: message)

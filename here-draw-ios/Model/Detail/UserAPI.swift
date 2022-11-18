@@ -10,7 +10,7 @@ import Alamofire
 
 class UserAPI {
     // 자동 로그인
-    static func autoLogin(sceneDelegate: SceneDelegate) {
+    static func autoLogin(viewController: BaseViewController) {
         let url = NetworkUtils.baseURL + "/users/login"
         let jwt = NetworkUtils.jwt
         let headers: HTTPHeaders = ["X-ACCESS-TOKEN" : jwt ?? ""]
@@ -24,10 +24,10 @@ class UserAPI {
                         print(data.result!)
                         
                         if UserDefaults.standard.string(forKey: "nickname") != nil {
-                            sceneDelegate.goToMain()
+                            viewController.goToMain()
                         } else {
                             // go Onboarding
-                            sceneDelegate.goToView(viewController: OnboardingViewController())
+                            viewController.changeRootViewController(OnboardingViewController())
                         }
                         
                     case false:
@@ -35,24 +35,24 @@ class UserAPI {
                         switch data.code {
                         // jwt 없음
                         case 2001:
-                            sceneDelegate.goToLogin()
+                            viewController.changeRootViewController(LoginViewController())
                         // 유효하지 않은 jwt
                         case 2002:
-                            sceneDelegate.goToLogin()
+                            viewController.changeRootViewController(LoginViewController())
                         // 로그인 불가 유저
                         case 2007:
                             print(data.message)
-                            sceneDelegate.goToLogin()
+                            viewController.changeRootViewController(LoginViewController())
                         default:
                             print(data.message)
-                            sceneDelegate.goToLogin()
+                            viewController.changeRootViewController(LoginViewController())
                         }
                     }
                     
                 case .failure(let error):
                     print("에러 response: \(response)")
                     print("에러 발생: \(error)")
-                    sceneDelegate.goToLogin()
+                    viewController.changeRootViewController(LoginViewController())
                 }
             }
     }

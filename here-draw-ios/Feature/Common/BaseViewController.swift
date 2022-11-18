@@ -51,7 +51,7 @@ class BaseViewController: UIViewController {
     
     func setLayout() {}
     
-    func gotoMain() {
+    func goToMain() {
         let tabVC = TabBarController()
         changeRootViewController(tabVC)
     }
