@@ -26,6 +26,9 @@ extension UIFont {
     class var sfPro22Pt: UIFont {
         return UIFont.systemFont(ofSize: 22.0, weight: .bold)
     }
+    class var gmarketSans22Pt: UIFont {
+        return UIFont(name: "GmarketSansBold", size: 22.0)!
+    }
     class var gmarketSans21Pt: UIFont {
         return UIFont(name: "GmarketSansBold", size: 21.0)!
     }
@@ -52,6 +55,9 @@ extension UIFont {
     }
     class var sfPro17Pt2: UIFont {
         return UIFont.systemFont(ofSize: 17.0, weight: .regular)
+    }
+    class var sfPro17Pt3: UIFont {
+        return UIFont.systemFont(ofSize: 17.0, weight: .bold)
     }
     class var sfPro16Pt3: UIFont {
         return UIFont.systemFont(ofSize: 16.0, weight: .bold)

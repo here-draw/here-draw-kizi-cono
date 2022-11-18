@@ -71,4 +71,16 @@ extension UIColor {
     @nonobjc class var kakaoBlack: UIColor {
         return UIColor.black.withAlphaComponent(85)
     }
+    @nonobjc class var pastelOrange: UIColor {
+        return UIColor(red: 253.0 / 255.0, green: 151.0 / 255.0, blue: 88.0 / 255.0, alpha: 1.0)
+      }
+      @nonobjc class var blush: UIColor {
+        return UIColor(red: 245.0 / 255.0, green: 162.0 / 255.0, blue: 162.0 / 255.0, alpha: 1.0)
+      }
+      @nonobjc class var palePeach: UIColor {
+        return UIColor(red: 1.0, green: 227.0 / 255.0, blue: 165.0 / 255.0, alpha: 1.0)
+      }
+      @nonobjc class var pastelPurple: UIColor {
+        return UIColor(red: 197.0 / 255.0, green: 183.0 / 255.0, blue: 1.0, alpha: 1.0)
+      }
 }

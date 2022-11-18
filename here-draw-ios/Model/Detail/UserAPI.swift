@@ -1,14 +1,14 @@
 //
-//  LoginAPI.swift
+//  UserAPI.swift
 //  here-draw-ios
 //
-//  Created by 박희지 on 2022/11/11.
+//  Created by 박희지 on 2022/11/17.
 //
 
 import Foundation
 import Alamofire
 
-class LoginAPI {
+class UserAPI {
     // 자동 로그인
     static func autoLogin(sceneDelegate: SceneDelegate) {
         let url = NetworkUtils.baseURL + "/users/login"
@@ -93,6 +93,75 @@ class LoginAPI {
                         print("실패: \(data.message)")
                     }
                     
+                case .failure(let error):
+                    print("에러 발생: \(error)")
+                }
+            }
+    }
+    
+    // 닉네임 중복 체크
+    static func checkNickname(nickname: String, onCompletion: @escaping (NicknameResponse) -> Void) {
+        let url = NetworkUtils.baseURL + "/users/check" + "?nickname=\(nickname)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        AF.request(url, method: .get)
+            .validate().responseDecodable(of: NicknameResponse.self) { response in
+                switch response.result {
+                case .success(let data):
+                    let message = data.message
+                    if data.isSuccess {
+                        print(message)
+                        onCompletion(data)
+                    } else {
+                        print("실패: \(message)")
+                        onCompletion(data)
+                    }
+                case .failure(let error):
+                    print("에러 발생: \(error)")
+                }
+            }
+    }
+    
+    // 초기 닉네임 설정
+    static func registerNickname(parameters: NicknameRequest, onCompletion: @escaping (NicknameResponse) -> Void) {
+        let url = NetworkUtils.baseURL + "/users/nickname"
+        let jwt = NetworkUtils.jwt
+        let headers: HTTPHeaders = ["X-ACCESS-TOKEN" : jwt ?? ""]
+        
+        AF.request(url, method: .patch, parameters: parameters, encoder: JSONParameterEncoder(), headers: headers)
+            .validate().responseDecodable(of: NicknameResponse.self) { response in
+                switch response.result {
+                case .success(let data):
+                    let message = data.message
+                    if data.isSuccess {
+                        print(message)
+                        onCompletion(data)
+                    } else {
+                        print("실패: \(message)")
+                        onCompletion(data)
+                    }
+                case .failure(let error):
+                    print("에러 발생: \(error)")
+                }
+            }
+    }
+    
+    // 작가 정보 조회
+    static func artistInfo(artistId: Int, onCompletion: @escaping (ArtistInfoResult) -> Void) {
+        let url = NetworkUtils.baseURL + "/users" + "/\(artistId)" + "/artist-info"
+        let headers: HTTPHeaders = ["X-ACCESS-TOKEN": NetworkUtils.jwt!]
+        
+        print(url)
+        AF.request(url, method: .get, headers: headers)
+            .validate().responseDecodable(of: ArtistInfoResponse.self) { response in
+                switch response.result {
+                case .success(let data):
+                    let message = data.message
+                    if data.isSuccess {
+                        print(message)
+                        onCompletion(data.result!)
+                    } else {
+                        print("실패: \(message)")
+                    }
                 case .failure(let error):
                     print("에러 발생: \(error)")
                 }

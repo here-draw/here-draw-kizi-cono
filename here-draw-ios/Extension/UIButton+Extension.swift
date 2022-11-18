@@ -9,13 +9,34 @@ import UIKit
 
 extension UIButton {
     
-    func shadow(opacity: Float, color: UIColor, offset: CGSize) {
-        self.layer.shadowOpacity = opacity
-        self.layer.shadowColor = color.cgColor
-        self.layer.shadowOffset = offset
-    }
-    
     func removeShadow() {
         self.layer.shadowOpacity = 0
+    }
+    
+    func alignTextBelow(_ spacing: CGFloat = 0) {
+        guard let image = self.imageView?.image else { return }
+        
+        guard let titleLabel = self.titleLabel else { return }
+        
+        guard let titleText = titleLabel.text else { return }
+        
+        let titleSize = titleText.size(withAttributes: [
+            NSAttributedString.Key.font : titleLabel.font as Any
+        ])
+        
+        titleEdgeInsets = UIEdgeInsets(top: spacing, left: -image.size.width, bottom: -image.size.height, right: 0)
+        imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + spacing), left: 0, bottom: 0, right: -titleSize.width)
+    }
+    
+    func titleLabelWidth() -> CGFloat {
+        guard let titleLabel = self.titleLabel else { return 0 }
+        
+        guard let titleText = titleLabel.text else { return 0 }
+        
+        let titleSize = titleText.size(withAttributes: [
+            NSAttributedString.Key.font : titleLabel.font as Any
+        ])
+        
+        return titleSize.width
     }
 }
