@@ -45,7 +45,10 @@ class ArtInfoTableViewCell: UICollectionViewCell {
         }
     }
     
-    func updateUI() {
+    func updateUI(with data: DetailArtInfoData?) {
+        guard let data = data else { return }
+        
+        copyrights = data.copyright
         contentView.backgroundColor = .mediumBlack
         
         let warningLabel = UILabel().then {
@@ -94,18 +97,7 @@ class ArtInfoTableViewCell: UICollectionViewCell {
         }
         
         descriptionLabel = UILabel().then {
-            $0.text = """
-                    💐
-                    
-                    안녕하세요!
-                    이 작품은 영지 X 래원 콜라보 음원,
-                    ‘ANEMONE’ 노래 앨범커버 디자인입니다.
-                    아네모네의 꽃말은 사랑의 괴로움,
-                    고마웠던 사랑 등 슬픈 꽃말을 갖고있어요.
-                    커버 속 여자는 래퍼 이영지이며 그녀가 짝사랑했던 래퍼
-                    래원을 텅빈 가슴 속에 넣어 텅 빈사랑을 표현해내었습니다.
-                    색감은 아네모네의 보라색 색감과 어우러지도록 퍼플-핑크계열의 색감을 활용했으며, 작품 속 영지가 입고 있는 옷은 작품 뮤비 속 옷과 같답니다.
-                    """
+            $0.text = data.description
             $0.font = .sfPro16Pt
             $0.textColor = .white
             $0.textAlignment = .center
@@ -119,7 +111,7 @@ class ArtInfoTableViewCell: UICollectionViewCell {
                 $0.height.equalTo(400)
             }
         }
-        descriptionLabel.snp.makeConstraints {
+        descriptionLabel.snp.updateConstraints {
             $0.height.equalTo(descriptionLabel.frame.height)
         }
         

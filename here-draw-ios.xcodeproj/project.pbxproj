@@ -12,7 +12,6 @@
 		4F025D812924B1C4007A164B /* ArtInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D802924B1C4007A164B /* ArtInfoTableViewCell.swift */; };
 		4F025D832924B1E8007A164B /* ArtHashtagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D822924B1E8007A164B /* ArtHashtagTableViewCell.swift */; };
 		4F025D852924B205007A164B /* ArtistInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D842924B205007A164B /* ArtistInfoTableViewCell.swift */; };
-		4F025D872924B22D007A164B /* ArtsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D862924B22D007A164B /* ArtsTableViewCell.swift */; };
 		4F025D892924B24D007A164B /* ArtsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D882924B24D007A164B /* ArtsCollectionViewCell.swift */; };
 		4F025D8B2924E0F8007A164B /* ArtAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D8A2924E0F8007A164B /* ArtAPI.swift */; };
 		4F025D8D2924E12B007A164B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025D8C2924E12B007A164B /* DetailViewModel.swift */; };
@@ -29,6 +28,14 @@
 		4F025DA529258414007A164B /* DynamicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DA429258414007A164B /* DynamicImage.swift */; };
 		4F025DA729262E12007A164B /* SoldoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DA629262E12007A164B /* SoldoutView.swift */; };
 		4F025DA9292652AE007A164B /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DA8292652AE007A164B /* ButtonWithImage.swift */; };
+		4F025DAB29269C96007A164B /* ArtHashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DAA29269C96007A164B /* ArtHashtagCollectionViewCell.swift */; };
+		4F025DAD2926B91E007A164B /* DetailArtInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DAC2926B91E007A164B /* DetailArtInfoData.swift */; };
+		4F025DAF2926B987007A164B /* ArtHashtagData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DAE2926B987007A164B /* ArtHashtagData.swift */; };
+		4F025DB12926B9D5007A164B /* ArtistInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DB02926B9D5007A164B /* ArtistInfoData.swift */; };
+		4F025DB32926BB27007A164B /* ArtsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DB22926BB27007A164B /* ArtsData.swift */; };
+		4F025DB52926BB94007A164B /* RecommendedArtsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DB42926BB94007A164B /* RecommendedArtsData.swift */; };
+		4F025DB72926D786007A164B /* OtherArtsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DB62926D786007A164B /* OtherArtsTableViewCell.swift */; };
+		4F025DB92926D87D007A164B /* RecommendedArtsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DB82926D87D007A164B /* RecommendedArtsTableViewCell.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
 		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
@@ -85,7 +92,6 @@
 		4F025D802924B1C4007A164B /* ArtInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtInfoTableViewCell.swift; sourceTree = "<group>"; };
 		4F025D822924B1E8007A164B /* ArtHashtagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtHashtagTableViewCell.swift; sourceTree = "<group>"; };
 		4F025D842924B205007A164B /* ArtistInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoTableViewCell.swift; sourceTree = "<group>"; };
-		4F025D862924B22D007A164B /* ArtsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtsTableViewCell.swift; sourceTree = "<group>"; };
 		4F025D882924B24D007A164B /* ArtsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4F025D8A2924E0F8007A164B /* ArtAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArtAPI.swift; path = "here-draw-ios/Feature/Detail/Cell/ArtAPI.swift"; sourceTree = SOURCE_ROOT; };
 		4F025D8C2924E12B007A164B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -102,6 +108,14 @@
 		4F025DA429258414007A164B /* DynamicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicImage.swift; sourceTree = "<group>"; };
 		4F025DA629262E12007A164B /* SoldoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoldoutView.swift; sourceTree = "<group>"; };
 		4F025DA8292652AE007A164B /* ButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithImage.swift; sourceTree = "<group>"; };
+		4F025DAA29269C96007A164B /* ArtHashtagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtHashtagCollectionViewCell.swift; sourceTree = "<group>"; };
+		4F025DAC2926B91E007A164B /* DetailArtInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArtInfoData.swift; sourceTree = "<group>"; };
+		4F025DAE2926B987007A164B /* ArtHashtagData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtHashtagData.swift; sourceTree = "<group>"; };
+		4F025DB02926B9D5007A164B /* ArtistInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoData.swift; sourceTree = "<group>"; };
+		4F025DB22926BB27007A164B /* ArtsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtsData.swift; sourceTree = "<group>"; };
+		4F025DB42926BB94007A164B /* RecommendedArtsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedArtsData.swift; sourceTree = "<group>"; };
+		4F025DB62926D786007A164B /* OtherArtsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherArtsTableViewCell.swift; sourceTree = "<group>"; };
+		4F025DB82926D87D007A164B /* RecommendedArtsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedArtsTableViewCell.swift; sourceTree = "<group>"; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
 		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,11 +189,13 @@
 		4F025D7F2924B196007A164B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				4F025DB62926D786007A164B /* OtherArtsTableViewCell.swift */,
+				4F025DB82926D87D007A164B /* RecommendedArtsTableViewCell.swift */,
 				4F025D802924B1C4007A164B /* ArtInfoTableViewCell.swift */,
 				4F025D822924B1E8007A164B /* ArtHashtagTableViewCell.swift */,
 				4F025D842924B205007A164B /* ArtistInfoTableViewCell.swift */,
-				4F025D862924B22D007A164B /* ArtsTableViewCell.swift */,
 				4F025D882924B24D007A164B /* ArtsCollectionViewCell.swift */,
+				4F025DAA29269C96007A164B /* ArtHashtagCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -192,6 +208,11 @@
 				4F025D95292551EB007A164B /* OtherArtsResponse.swift */,
 				4F025D9C29255CE4007A164B /* RecommendedArtsResponse.swift */,
 				4F025D9E29256E7E007A164B /* ArtHeaderViewData.swift */,
+				4F025DAC2926B91E007A164B /* DetailArtInfoData.swift */,
+				4F025DAE2926B987007A164B /* ArtHashtagData.swift */,
+				4F025DB02926B9D5007A164B /* ArtistInfoData.swift */,
+				4F025DB22926BB27007A164B /* ArtsData.swift */,
+				4F025DB42926BB94007A164B /* RecommendedArtsData.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -674,17 +695,21 @@
 				4F025D812924B1C4007A164B /* ArtInfoTableViewCell.swift in Sources */,
 				4F5911DE291B6C0000D84018 /* PassThroughView.swift in Sources */,
 				4FE736B8291F741F00861A0E /* AutoLoginResponse.swift in Sources */,
+				4F025DAB29269C96007A164B /* ArtHashtagCollectionViewCell.swift in Sources */,
 				4FFB5495290CD7D900093E97 /* NavigationBarView.swift in Sources */,
 				4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */,
 				4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */,
+				4F025DAD2926B91E007A164B /* DetailArtInfoData.swift in Sources */,
 				4F461CE529214743006A8576 /* ArtHeaderView.swift in Sources */,
 				4F025D9229254279007A164B /* ArtistInfoResponse.swift in Sources */,
+				4F025DB12926B9D5007A164B /* ArtistInfoData.swift in Sources */,
 				4F025DA529258414007A164B /* DynamicImage.swift in Sources */,
 				4FFB548029016F4A00093E97 /* HomeTopView.swift in Sources */,
 				4FE736BB291FE0A800861A0E /* OnboardingViewController.swift in Sources */,
 				4F025D892924B24D007A164B /* ArtsCollectionViewCell.swift in Sources */,
 				4FFB548B29025EE200093E97 /* HomeArtModel.swift in Sources */,
 				4FFB547828FFB77400093E97 /* PagerTab.swift in Sources */,
+				4F025DB32926BB27007A164B /* ArtsData.swift in Sources */,
 				4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */,
 				4FF2A68628FE4C0B00C236C1 /* MypageViewController.swift in Sources */,
 				4F7D9D672921339B00A9ABE1 /* DetailViewController.swift in Sources */,
@@ -699,7 +724,6 @@
 				4F025DA729262E12007A164B /* SoldoutView.swift in Sources */,
 				4FF2A68428FE4BFD00C236C1 /* WishViewController.swift in Sources */,
 				4F025D96292551EB007A164B /* OtherArtsResponse.swift in Sources */,
-				4F025D872924B22D007A164B /* ArtsTableViewCell.swift in Sources */,
 				4FF4B4942913D92F0035ED7F /* BaseView.swift in Sources */,
 				4FF4B49A29142FF40035ED7F /* UIImage+Extension.swift in Sources */,
 				4FFB549E2910445B00093E97 /* PinterestLayout.swift in Sources */,
@@ -707,6 +731,7 @@
 				4F025D9F29256E7E007A164B /* ArtHeaderViewData.swift in Sources */,
 				4F025DA9292652AE007A164B /* ButtonWithImage.swift in Sources */,
 				4F025D9429254D18007A164B /* UserAPI.swift in Sources */,
+				4F025DB72926D786007A164B /* OtherArtsTableViewCell.swift in Sources */,
 				4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */,
 				4F025D832924B1E8007A164B /* ArtHashtagTableViewCell.swift in Sources */,
 				4F025D8B2924E0F8007A164B /* ArtAPI.swift in Sources */,
@@ -718,6 +743,7 @@
 				4FFB547B28FFEFA100093E97 /* HomeArtCollectionViewCell.swift in Sources */,
 				4FE736B4291EEA2800861A0E /* UIViewController+Extension.swift in Sources */,
 				4F025D7E2924AAB1007A164B /* DetailTableViewController.swift in Sources */,
+				4F025DB52926BB94007A164B /* RecommendedArtsData.swift in Sources */,
 				4FE736B6291F560000861A0E /* LoginViewModel.swift in Sources */,
 				4F5911E8291BA28A00D84018 /* AgreementViewController.swift in Sources */,
 				4FF4B4A1291691A60035ED7F /* OnboardingCollectionViewCell.swift in Sources */,
@@ -729,7 +755,9 @@
 				4FF2A68D28FEC4E000C236C1 /* DeviceUtils.swift in Sources */,
 				4F025DA129257BF5007A164B /* UIView+Extension.swift in Sources */,
 				4F025DA3292580A1007A164B /* UIImageView+Extension.swift in Sources */,
+				4F025DAF2926B987007A164B /* ArtHashtagData.swift in Sources */,
 				4FF2A67728FE45B700C236C1 /* TabBarItem.swift in Sources */,
+				4F025DB92926D87D007A164B /* RecommendedArtsTableViewCell.swift in Sources */,
 				4FFB5482290170E300093E97 /* BaseScrollView.swift in Sources */,
 				4FFB549229093EAF00093E97 /* UINavigationItem+Extension.swift in Sources */,
 				4F5911E1291B6C5D00D84018 /* AgreeBottomSheetView.swift in Sources */,

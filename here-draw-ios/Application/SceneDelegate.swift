@@ -20,10 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
-//        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
-//        window?.makeKeyAndVisible()
         
-        LoginAPI.autoLogin(sceneDelegate: self)
+//        UserAPI.autoLogin(sceneDelegate: self)
+        let vc = DetailViewController()
+        vc.viewModel.fetchData(artId: 2, artistId: 1) {
+            self.goToView(viewController: vc)
+        }
+//        vc.viewModel.fetchData(artId: 25, artistId: 4) {
+//            self.goToView(viewController: vc)
+//        }
     }
     
     func goToView(viewController: UIViewController) {

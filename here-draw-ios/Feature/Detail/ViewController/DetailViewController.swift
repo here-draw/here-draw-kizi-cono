@@ -61,6 +61,13 @@ class DetailViewController: BaseViewController {
         // artHeaderView
         artHeaderView.data = viewModel.artHeaderView()
         
+        // detailTableVC
+        detailTablelVC.detailArtInfoData = viewModel.detailArtInfoData()
+        detailTablelVC.artHashtagData = viewModel.artHashtagData()
+        detailTablelVC.artistInfoData = viewModel.artistInfoData()
+        detailTablelVC.otherArtsData = viewModel.otherArtsData()
+        detailTablelVC.recommendedArtsData = viewModel.recommendedArtsData()
+        detailTablelVC.fetchDone = true
     }
     
     override func setLayout() {

@@ -20,8 +20,8 @@ extension DetailTableViewController {
             case .artInfo: return ArtInfoTableViewCell.self
             case .artHashtag: return ArtHashtagTableViewCell.self
             case .artistInfo: return ArtistInfoTableViewCell.self
-            case .otherArts: return ArtsTableViewCell.self
-            case .recommendedArts: return ArtsTableViewCell.self
+            case .otherArts: return OtherArtsTableViewCell.self
+            case .recommendedArts: return RecommendedArtsTableViewCell.self
             }
         }
         
@@ -30,8 +30,8 @@ extension DetailTableViewController {
             case .artInfo: return "artInfo"
             case .artHashtag: return "artHashtag"
             case .artistInfo: return "artistInfo"
-            case .otherArts: return "arts"
-            case .recommendedArts: return "arts"
+            case .otherArts: return "otherArts"
+            case .recommendedArts: return "recommendedArts"
             }
         }
         
@@ -55,6 +55,20 @@ class DetailTableViewController: BaseViewController {
         didSet {
             updateTabButton()
             autoScroll()
+        }
+    }
+    
+    var detailArtInfoData: DetailArtInfoData?
+    var artHashtagData: ArtHashtagData?
+    var artistInfoData: ArtistInfoData?
+    var otherArtsData: ArtsData?
+    var recommendedArtsData: RecommendedArtsData?
+    
+    var fetchDone: Bool = false {
+        didSet {
+            if fetchDone {
+                artDetailTableView.reloadData()
+            }
         }
     }
     
@@ -227,39 +241,29 @@ extension DetailTableViewController: UICollectionViewDelegateFlowLayout, UIColle
                 return UICollectionViewCell()
             }
             
-            cell.updateUI()
+            cell.updateUI(with: detailArtInfoData)
             return cell
         case .artHashtag:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type?.cellIdentifier ?? "", for: indexPath) as? ArtHashtagTableViewCell else {
                 return UICollectionViewCell()
             }
             
-//            cell.setUpCVCell()
-            
-            cell.updateUI()
+            cell.updateUI(with: artHashtagData)
             return cell
         case .artistInfo:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type?.cellIdentifier ?? "", for: indexPath) as? ArtistInfoTableViewCell else { return UICollectionViewCell() }
             
-//            cell.delegate = self
-            
-            cell.updateUI()
+            cell.updateUI(with: artistInfoData)
             return cell
         case .otherArts:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type?.cellIdentifier ?? "", for: indexPath) as? ArtsTableViewCell else { return UICollectionViewCell() }
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type?.cellIdentifier ?? "", for: indexPath) as? OtherArtsTableViewCell else { return UICollectionViewCell() }
             
-//            cell.setUpCVCell()
-//            cell.delegate = self
-            
-            cell.updateUI(artType: 0)
+            cell.updateUI(with: otherArtsData)
             return cell
         case .recommendedArts:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type?.cellIdentifier ?? "", for: indexPath) as? ArtsTableViewCell else { return UICollectionViewCell() }
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type?.cellIdentifier ?? "", for: indexPath) as? RecommendedArtsTableViewCell else { return UICollectionViewCell() }
             
-//            cell.setUpCVCell()
-//            cell.delegate = self
-            
-            cell.updateUI(artType: 1)
+            cell.updateUI(with: recommendedArtsData)
             return cell
         case .none:
             return UICollectionViewCell()

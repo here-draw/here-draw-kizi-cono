@@ -101,4 +101,36 @@ class DetailViewModel {
             nickname: artistInfo!.nickname
         )
     }
+    
+    // DetailTableViewController에 필요한 데이터 전달
+    func detailArtInfoData() -> DetailArtInfoData {
+        return DetailArtInfoData(
+            copyright: artInfo!.copyright,
+            description: artInfo!.description
+        )
+    }
+    
+    func artHashtagData() -> ArtHashtagData {
+        return ArtHashtagData(hashtags: artInfo!.tag)
+    }
+    
+    func artistInfoData() -> ArtistInfoData {
+        return ArtistInfoData(
+            nickname: artistInfo!.nickname,
+            profileImg: artistInfo!.profileImg,
+            description: artistInfo!.description,
+            followerCnt: artistInfo!.followerCnt,
+            isFollowing: artistInfo!.isFollowing,
+            likeCnt: artistInfo!.likeCnt,
+            myArt: artInfo!.myArt
+        )
+    }
+    
+    func otherArtsData() -> ArtsData {
+        return ArtsData(artList: otherArts!.artList)
+    }
+    
+    func recommendedArtsData() -> RecommendedArtsData {
+        return RecommendedArtsData(artList: recommendedArts!)
+    }
 }
