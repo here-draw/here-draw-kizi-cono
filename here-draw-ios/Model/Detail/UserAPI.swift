@@ -150,7 +150,6 @@ class UserAPI {
         let url = NetworkUtils.baseURL + "/users" + "/\(artistId)" + "/artist-info"
         let headers: HTTPHeaders = ["X-ACCESS-TOKEN": NetworkUtils.jwt!]
         
-        print(url)
         AF.request(url, method: .get, headers: headers)
             .validate().responseDecodable(of: ArtistInfoResponse.self) { response in
                 switch response.result {

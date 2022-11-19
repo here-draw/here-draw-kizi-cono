@@ -8,15 +8,21 @@
 import UIKit
 
 class HomeListViewController: BaseViewController, PageComponentProtocol {
+    
     // MARK: - Properties
     
     var pageTitle: String
-    let artModels = HomeArtModel.dummy
+//    let artModels = HomeArtModel.dummy
+    var artInfoList: [ArtInfoList]?
+    var reloadFlag = true
+    var isLoading = false
     
     fileprivate var artCollectionView: UICollectionView!
-    
+    private var loadingView: LoadingCollectionReusableView?
 
     // MARK: - View Life Cycle
+    
+    let viewModel = HomeListViewModel()
     
     init(type: String) {
         self.pageTitle = type
@@ -29,6 +35,11 @@ class HomeListViewController: BaseViewController, PageComponentProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.fetchMainArts(type: .firstLoad(pageTitle)) { availableReload in
+            self.artInfoList = self.viewModel.artInfoList()
+            self.reloadFlag = availableReload
+            self.updateUI()
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,6 +54,33 @@ class HomeListViewController: BaseViewController, PageComponentProtocol {
     }
     
     // MARK: - Functions
+    
+    func updateUI() {
+        artCollectionView.reloadData()
+    }
+    
+    private func loadMoreData() {
+        if !isLoading {
+            isLoading.toggle()
+            DispatchQueue.global().async {
+                // Fake background loading task for 2 seconds
+                sleep(2)
+                // Download more data here
+                DispatchQueue.global().async {
+                    let cursor = self.viewModel.cursor()
+                    self.viewModel.fetchMainArts(type: .reload(self.pageTitle, cursor.0, cursor.1)) { availableReload in
+                        self.artInfoList = self.viewModel.artInfoList()                        
+                        self.reloadFlag = availableReload
+                        self.isLoading = false
+                        self.isLoading.toggle()
+                        DispatchQueue.main.async {
+                            self.updateUI()
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     func requiredHeight(text:String , cellWidth : CGFloat) -> CGFloat {
         // fake label
@@ -72,6 +110,11 @@ class HomeListViewController: BaseViewController, PageComponentProtocol {
         artCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout).then {
             $0.dataSource = self
             $0.register(HomeArtCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+            $0.register(
+                LoadingCollectionReusableView.self,
+                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                withReuseIdentifier: "loadingView"
+            )
             $0.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
             
             $0.backgroundColor = .black1
@@ -91,7 +134,7 @@ class HomeListViewController: BaseViewController, PageComponentProtocol {
 
 extension HomeListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return artModels.count
+        return artInfoList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -100,8 +143,57 @@ extension HomeListViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.fetchItem(model: artModels[indexPath.item])
+        guard let artInfo = artInfoList?[indexPath.item] else { return UICollectionViewCell() }
+        cell.fetchItem(model: artInfo)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        if isLoading || !reloadFlag { // 로딩중이거나 || 서버의 모든 이미지 다 불러왔다면,
+            return CGSize.zero // 로딩하면 안됨.
+        } else {
+            return CGSize(width: collectionView.bounds.size.width, height: 55)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == UICollectionView.elementKindSectionFooter {
+            guard let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "loadingView", for: indexPath) as? LoadingCollectionReusableView else { return  UICollectionReusableView() }
+            loadingView = footerView
+            loadingView!.setLayout()
+            loadingView!.backgroundColor = .purple
+            return footerView
+        }
+        return  UICollectionReusableView()
+    }
+    
+    // 인디케이터 로딩 애니메이션 시작. (footer appears)
+    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+        if elementKind == UICollectionView.elementKindSectionFooter {
+            if isLoading {
+                self.loadingView?.loadingIndicator.startAnimating()
+            } else {
+                self.loadingView?.loadingIndicator.stopAnimating()
+            }
+        }
+    }
+    // 인디케이터 로딩 애니메이션 끝. (footer disappears)
+    func collectionView(_ collectionView: UICollectionView, didEndDisplayingSupplementaryView view: UICollectionReusableView, forElementOfKind elementKind: String, at indexPath: IndexPath) {
+        if elementKind == UICollectionView.elementKindSectionFooter {
+            self.loadingView?.loadingIndicator.stopAnimating()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if !reloadFlag { // 서버의 모든 이미지 다 불러왔다면,
+            print("로딩 불가 (데이터 끝)") //  더이상 로딩하면 안됨.
+        }
+        else { // 서버의 모든 이미지를 다 불러온 게 아닌 상황이고,
+            if indexPath.item == (artInfoList?.count ?? 0) - 1 && !isLoading { // 사용자 스크롤이 마지막 index면서 로딩중이 아닐 때,
+                loadMoreData()
+                print("로딩 more Data")
+            }
+        }
     }
 }
 
@@ -109,9 +201,12 @@ extension HomeListViewController: UICollectionViewDataSource {
 
 extension HomeListViewController: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath, cellWidth: CGFloat) -> CGFloat {
-        let imgHeight = artModels[indexPath.item].thumbnail.scaledHeight(scaledWidth: cellWidth)
+        guard let art = artInfoList?[indexPath.item] else { return 0 }
         
-        let textHeight = requiredHeight(text: artModels[indexPath.item].name, cellWidth: cellWidth)
+        let image = DynamicImage(width: art.width, height: art.height)
+        let imgHeight = DeviceUtils.calculateImageHeight(sourceImage: image, scaledToWidth: cellWidth)
+        
+        let textHeight = requiredHeight(text: art.title, cellWidth: cellWidth)
         
         return imgHeight + textHeight + 5
     }

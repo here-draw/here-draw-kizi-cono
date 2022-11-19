@@ -8,12 +8,33 @@
 import Alamofire
 
 class ArtAPI {
+    // 메인: 작품 목록 조회
+    static func mainArts(type viewType: MainArtsViewType, onCompletion: @escaping (MainArtsResult) -> Void) {
+        let url = viewType.url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let headers: HTTPHeaders = ["X-ACCESS-TOKEN": NetworkUtils.jwt!]
+        
+        AF.request(url, method: .get, headers: headers)
+            .validate().responseDecodable(of: MainArtsResponse.self) { response in
+                switch response.result {
+                case .success(let data):
+                    let message = data.message
+                    if data.isSuccess {
+                        print(message)
+                        onCompletion(data.result!)
+                    } else {
+                        print("실패: \(message)")
+                    }
+                case .failure(let error):
+                    print("에러 발생: \(error)")
+                }
+            }
+    }
+    
     // 작품 상세 조회
     static func detailArtInfo(artId: Int, onCompletion: @escaping (ArtInfoResult) -> Void) {
         let url = NetworkUtils.baseURL + "/arts" + "/\(artId)"
         let headers: HTTPHeaders = ["X-ACCESS-TOKEN": NetworkUtils.jwt!]
         
-        print(url)
         AF.request(url, method: .get, headers: headers)
             .validate().responseDecodable(of: ArtInfoResponse.self) { response in
                 switch response.result {

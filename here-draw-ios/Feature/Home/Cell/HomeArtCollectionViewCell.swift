@@ -22,7 +22,7 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        setLayout()
+//        setLayout()
     }
     
     override init(frame: CGRect) {
@@ -50,9 +50,9 @@ class HomeArtCollectionViewCell: UICollectionViewCell {
 
 extension HomeArtCollectionViewCell {
     
-    public func fetchItem(model: HomeArtModel) {
-        artImageView.image = model.thumbnail
-        nameLabel.text = model.name
+    public func fetchItem(model: ArtInfoList) {
+        artImageView.loadImage(url: model.artImage)
+        nameLabel.text = model.title
     }
     
     public func nameLabelHeigth() -> CGFloat {
@@ -61,7 +61,9 @@ extension HomeArtCollectionViewCell {
     
     private func setLayout() {
         artImageView = UIImageView().then {
+            $0.clipsToBounds = true
             $0.layer.cornerRadius = 3
+            $0.backgroundColor = .white
             self.contentView.addSubview($0)
             
             $0.snp.makeConstraints {

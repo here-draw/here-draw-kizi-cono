@@ -40,6 +40,10 @@
 		4F025DBE2927AB74007A164B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DBD2927AB74007A164B /* SplashViewController.swift */; };
 		4F025DC02927C03D007A164B /* ArticleBannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DBF2927C03D007A164B /* ArticleBannerResponse.swift */; };
 		4F025DC22927C1A1007A164B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DC12927C1A1007A164B /* HomeViewModel.swift */; };
+		4F025DC52927DB19007A164B /* HomeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DC42927DB19007A164B /* HomeListViewModel.swift */; };
+		4F025DC72927E2C2007A164B /* MainArtsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DC62927E2C2007A164B /* MainArtsViewType.swift */; };
+		4F025DC929281117007A164B /* MainArtsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DC829281117007A164B /* MainArtsResponse.swift */; };
+		4F025DCB2928240D007A164B /* LoadingCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DCA2928240D007A164B /* LoadingCollectionReusableView.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
 		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
@@ -124,6 +128,10 @@
 		4F025DBD2927AB74007A164B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		4F025DBF2927C03D007A164B /* ArticleBannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleBannerResponse.swift; sourceTree = "<group>"; };
 		4F025DC12927C1A1007A164B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4F025DC42927DB19007A164B /* HomeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListViewModel.swift; sourceTree = "<group>"; };
+		4F025DC62927E2C2007A164B /* MainArtsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainArtsViewType.swift; sourceTree = "<group>"; };
+		4F025DC829281117007A164B /* MainArtsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainArtsResponse.swift; sourceTree = "<group>"; };
+		4F025DCA2928240D007A164B /* LoadingCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionReusableView.swift; sourceTree = "<group>"; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
 		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +238,7 @@
 			children = (
 				4F025D9829255422007A164B /* OtherArtsViewType.swift */,
 				4F025D9A29255B61007A164B /* RecommendedArtsViewType.swift */,
+				4F025DC62927E2C2007A164B /* MainArtsViewType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -240,6 +249,15 @@
 				4F025DBD2927AB74007A164B /* SplashViewController.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		4F025DC32927DB00007A164B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4F025DC12927C1A1007A164B /* HomeViewModel.swift */,
+				4F025DC42927DB19007A164B /* HomeListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4F04A913292082DF00DBF180 /* Onboarding */ = {
@@ -467,11 +485,11 @@
 		4FF2A67C28FE4B8000C236C1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4F025DC32927DB00007A164B /* ViewModel */,
 				4FFB549C2910441A00093E97 /* Layout */,
 				4FFB547928FFEF6100093E97 /* Cell */,
 				4FFB547028FF9EC100093E97 /* View */,
 				4FFB547128FF9ECE00093E97 /* ViewControllers */,
-				4F025DC12927C1A1007A164B /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -489,6 +507,7 @@
 				4F5911DB291B6BC100D84018 /* BottomSheetView.swift */,
 				4F5911DD291B6C0000D84018 /* PassThroughView.swift */,
 				4F025DA8292652AE007A164B /* ButtonWithImage.swift */,
+				4F025DCA2928240D007A164B /* LoadingCollectionReusableView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -564,6 +583,7 @@
 			children = (
 				4FFB548A29025EE200093E97 /* HomeArtModel.swift */,
 				4F025DBF2927C03D007A164B /* ArticleBannerResponse.swift */,
+				4F025DC829281117007A164B /* MainArtsResponse.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -725,6 +745,7 @@
 				4F025DB12926B9D5007A164B /* ArtistInfoData.swift in Sources */,
 				4F025DA529258414007A164B /* DynamicImage.swift in Sources */,
 				4FFB548029016F4A00093E97 /* HomeTopView.swift in Sources */,
+				4F025DC52927DB19007A164B /* HomeListViewModel.swift in Sources */,
 				4FE736BB291FE0A800861A0E /* OnboardingViewController.swift in Sources */,
 				4F025D892924B24D007A164B /* ArtsCollectionViewCell.swift in Sources */,
 				4FFB548B29025EE200093E97 /* HomeArtModel.swift in Sources */,
@@ -733,6 +754,7 @@
 				4F025DB32926BB27007A164B /* ArtsData.swift in Sources */,
 				4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */,
 				4FF2A68628FE4C0B00C236C1 /* MypageViewController.swift in Sources */,
+				4F025DCB2928240D007A164B /* LoadingCollectionReusableView.swift in Sources */,
 				4F7D9D672921339B00A9ABE1 /* DetailViewController.swift in Sources */,
 				4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */,
 				4F025DBB2927A678007A164B /* ArticleCompilationAPI.swift in Sources */,
@@ -741,6 +763,7 @@
 				4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */,
 				4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */,
 				4F025D8D2924E12B007A164B /* DetailViewModel.swift in Sources */,
+				4F025DC929281117007A164B /* MainArtsResponse.swift in Sources */,
 				4FF2A68028FE4BE000C236C1 /* MessageViewController.swift in Sources */,
 				4F025D902924E2E4007A164B /* ArtInfoResponse.swift in Sources */,
 				4F025DA729262E12007A164B /* SoldoutView.swift in Sources */,
@@ -784,6 +807,7 @@
 				4F025DC22927C1A1007A164B /* HomeViewModel.swift in Sources */,
 				4FFB5482290170E300093E97 /* BaseScrollView.swift in Sources */,
 				4FFB549229093EAF00093E97 /* UINavigationItem+Extension.swift in Sources */,
+				4F025DC72927E2C2007A164B /* MainArtsViewType.swift in Sources */,
 				4F5911E1291B6C5D00D84018 /* AgreeBottomSheetView.swift in Sources */,
 				4F89175C28FBC297005A1B81 /* UIColor+Extension.swift in Sources */,
 			);
