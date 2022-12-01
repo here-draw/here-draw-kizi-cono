@@ -22,6 +22,7 @@ class SplashViewController: BaseViewController {
     func timer() {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             UserAPI.autoLogin(viewController: self)
+//            self.goToMain()
         }
     }
     

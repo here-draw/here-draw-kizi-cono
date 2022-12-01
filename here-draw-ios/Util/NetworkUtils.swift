@@ -9,5 +9,5 @@ import Foundation
 
 class NetworkUtils {
     static let baseURL = Bundle.main.object(forInfoDictionaryKey: "BASE_URL") as? String ?? ""
-    static let jwt = UserDefaults.standard.string(forKey: "jwt")
+    static var jwt = UserDefaults.standard.string(forKey: "jwt")
 }

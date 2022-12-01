@@ -109,6 +109,7 @@ class HomeListViewController: BaseViewController, PageComponentProtocol {
         
         artCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout).then {
             $0.dataSource = self
+            $0.delegate = self
             $0.register(HomeArtCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
             $0.register(
                 LoadingCollectionReusableView.self,
@@ -190,9 +191,19 @@ extension HomeListViewController: UICollectionViewDataSource {
         }
         else { // 서버의 모든 이미지를 다 불러온 게 아닌 상황이고,
             if indexPath.item == (artInfoList?.count ?? 0) - 1 && !isLoading { // 사용자 스크롤이 마지막 index면서 로딩중이 아닐 때,
-                loadMoreData()
+//                loadMoreData()
                 print("로딩 more Data")
             }
+        }
+    }
+}
+
+extension HomeListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        guard let art = artInfoList?[indexPath.item] else { return }
+        vc.viewModel.fetchData(artId: art.artId, artistId: art.artistId) {
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }

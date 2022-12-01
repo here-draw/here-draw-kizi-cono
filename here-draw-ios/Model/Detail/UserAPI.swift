@@ -12,8 +12,11 @@ class UserAPI {
     // 자동 로그인
     static func autoLogin(viewController: BaseViewController) {
         let url = NetworkUtils.baseURL + "/users/login"
-        let jwt = NetworkUtils.jwt
-        let headers: HTTPHeaders = ["X-ACCESS-TOKEN" : jwt ?? ""]
+        guard let jwt = NetworkUtils.jwt else {
+            viewController.changeRootViewController(LoginViewController())
+            return
+        }
+        let headers: HTTPHeaders = ["X-ACCESS-TOKEN" : jwt]
         
         AF.request(url, method: .patch, headers: headers)
             .validate().responseDecodable(of: AutoLoginResponse.self) { response in
@@ -21,7 +24,7 @@ class UserAPI {
                 case .success(let data):
                     switch data.isSuccess {
                     case true:
-                        print(data.result!)
+                        print("자동 로그인 " + data.result!)
                         
                         if UserDefaults.standard.string(forKey: "nickname") != nil {
                             viewController.goToMain()
@@ -67,6 +70,7 @@ class UserAPI {
                 case .success(let data):
                     switch data.isSuccess {
                     case true:
+                        print("카카오 로그인 " + data.message)
                         onCompletion(data)
                     case false:
                         print("실패: \(data.message)")
@@ -88,6 +92,7 @@ class UserAPI {
                 case .success(let data):
                     switch data.isSuccess {
                     case true:
+                        print("애플 로그인 " + data.message)
                         onCompletion(data)
                     case false:
                         print("실패: \(data.message)")
@@ -100,16 +105,16 @@ class UserAPI {
     }
     
     // 닉네임 중복 체크
-    static func checkNickname(nickname: String, onCompletion: @escaping (NicknameResponse) -> Void) {
+    static func checkNickname(nickname: String, onCompletion: @escaping (OnboardingNicknameResponse) -> Void) {
         let url = NetworkUtils.baseURL + "/users/check" + "?nickname=\(nickname)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
         AF.request(url, method: .get)
-            .validate().responseDecodable(of: NicknameResponse.self) { response in
+            .validate().responseDecodable(of: OnboardingNicknameResponse.self) { response in
                 switch response.result {
                 case .success(let data):
                     let message = data.message
                     if data.isSuccess {
-                        print(message)
+                        print("닉네임 중복 체크 " + data.message)
                         onCompletion(data)
                     } else {
                         print("실패: \(message)")
@@ -122,16 +127,18 @@ class UserAPI {
     }
     
     // 초기 닉네임 설정
-    static func registerNickname(parameters: NicknameRequest, onCompletion: @escaping (NicknameResponse) -> Void) {
+    static func registerNickname(parameters: NicknameRequest, onCompletion: @escaping (OnboardingNicknameResponse) -> Void) {
         let url = NetworkUtils.baseURL + "/users/nickname"
-        let jwt = NetworkUtils.jwt
-        let headers: HTTPHeaders = ["X-ACCESS-TOKEN" : jwt ?? ""]
+        guard let jwt = NetworkUtils.jwt else { return }
+        let headers: HTTPHeaders = ["X-ACCESS-TOKEN" : jwt]
+        
+        print("jwt를 잘 가지고 있는가?: \(jwt)")
         
         AF.request(url, method: .patch, parameters: parameters, encoder: JSONParameterEncoder(), headers: headers)
-            .validate().responseDecodable(of: NicknameResponse.self) { response in
+            .validate().responseDecodable(of: OnboardingNicknameResponse.self) { response in
                 switch response.result {
                 case .success(let data):
-                    let message = data.message
+                    let message = "초기 닉네임 설정 " + data.message
                     if data.isSuccess {
                         print(message)
                         onCompletion(data)
@@ -148,13 +155,14 @@ class UserAPI {
     // 작가 정보 조회
     static func artistInfo(artistId: Int, onCompletion: @escaping (ArtistInfoResult) -> Void) {
         let url = NetworkUtils.baseURL + "/users" + "/\(artistId)" + "/artist-info"
-        let headers: HTTPHeaders = ["X-ACCESS-TOKEN": NetworkUtils.jwt!]
+        guard let jwt = NetworkUtils.jwt else { return }
+        let headers: HTTPHeaders = ["X-ACCESS-TOKEN" : jwt]
         
         AF.request(url, method: .get, headers: headers)
             .validate().responseDecodable(of: ArtistInfoResponse.self) { response in
                 switch response.result {
                 case .success(let data):
-                    let message = data.message
+                    let message = "작가 정보 조회 " + data.message
                     if data.isSuccess {
                         print(message)
                         onCompletion(data.result!)

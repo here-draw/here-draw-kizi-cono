@@ -24,9 +24,6 @@ class HomeViewController: BaseViewController {
     // MARK: - View Life Cycle
     
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.fetchBanners() {
-            self.updateUI()
-        }
     }
     
     override func viewDidLoad() {
@@ -34,6 +31,9 @@ class HomeViewController: BaseViewController {
         initNavigationBar()
         setNavigationBar()
         setCategories()
+        viewModel.fetchBanners() {
+            self.updateUI()
+        }
     }
     
     // MARK: - Functions

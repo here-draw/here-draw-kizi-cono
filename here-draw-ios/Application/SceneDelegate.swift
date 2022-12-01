@@ -22,7 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         
         goToView(viewController: SplashViewController())
-//        let vc = DetailViewController()
+//        let vc = OnboardingViewController()
+//        goToView(viewController: vc)
 //        vc.viewModel.fetchData(artId: 7, artistId: 4) {
 //            self.goToView(viewController: vc)
 //        }

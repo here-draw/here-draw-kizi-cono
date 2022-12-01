@@ -128,6 +128,7 @@ class DetailViewController: BaseViewController {
             $0.setImage(UIImage(systemName: "chevron.left"), for: .normal)
             $0.setPreferredSymbolConfiguration(UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold), forImageIn: .normal)
             $0.tintColor = .white
+            $0.addTarget(self, action: #selector(back(_:)), for: .touchUpInside)
             view.addSubview($0)
             
             $0.snp.makeConstraints {
@@ -266,33 +267,38 @@ class DetailViewController: BaseViewController {
         }
     }
     
+    @objc
+    func back(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     let reportHandler: (UIAlertAction) -> Void = { action in
         print(action.title)
     }
 }
 
-//MARK: - Preview
-
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-
-struct ViewRepresentable: UIViewRepresentable{
-    typealias UIViewType = UIView
-    private let vc = DetailViewController()
-    
-    func makeUIView(context: Context) -> UIView {
-        vc.view
-    }
-    
-    func updateUIView(_ uiView: UIView, context: Context) {
-        // 데이터 로드 필요할 때
-        // vc.tableView.reloadData()
-    }
-}
-
-struct ViewController_Previews: PreviewProvider{
-    static var previews: some View{
-        ViewRepresentable()
-    }
-}
-#endif
+////MARK: - Preview
+//
+//#if canImport(SwiftUI) && DEBUG
+//import SwiftUI
+//
+//struct ViewRepresentable: UIViewRepresentable{
+//    typealias UIViewType = UIView
+//    private let vc = DetailViewController()
+//    
+//    func makeUIView(context: Context) -> UIView {
+//        vc.view
+//    }
+//    
+//    func updateUIView(_ uiView: UIView, context: Context) {
+//        // 데이터 로드 필요할 때
+//        // vc.tableView.reloadData()
+//    }
+//}
+//
+//struct ViewController_Previews: PreviewProvider{
+//    static var previews: some View{
+//        ViewRepresentable()
+//    }
+//}
+//#endif

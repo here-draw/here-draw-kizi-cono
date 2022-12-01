@@ -101,14 +101,14 @@ class ArtInfoTableViewCell: UICollectionViewCell {
             $0.font = .sfPro16Pt
             $0.textColor = .white
             $0.textAlignment = .center
-            $0.numberOfLines = 100
+            $0.numberOfLines = 50
             $0.sizeToFit()
             contentView.addSubview($0)
             
             $0.snp.makeConstraints {
                 $0.top.equalTo(copyrightStackView.snp.bottom).offset(30)
                 $0.leading.trailing.equalToSuperview().inset(20)
-                $0.height.equalTo(400)
+                $0.height.equalTo(350)
             }
         }
         descriptionLabel.snp.updateConstraints {
@@ -130,7 +130,7 @@ class ArtInfoTableViewCell: UICollectionViewCell {
             contentView.addSubview($0)
             
             $0.snp.makeConstraints {
-                $0.top.equalToSuperview().inset(500)
+                $0.top.equalTo(descriptionLabel.snp.bottom).offset(30)
                 $0.leading.trailing.equalToSuperview().inset(20)
                 $0.height.equalTo(58)
                 $0.bottom.equalToSuperview().inset(30).priority(.low)

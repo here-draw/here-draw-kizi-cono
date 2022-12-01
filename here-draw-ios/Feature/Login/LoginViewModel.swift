@@ -28,10 +28,12 @@ class LoginViewModel {
                     UserAPI.loginKakao(parameters: LoginRequest(accessToken: token)) { [weak self] response in
                         print(response)
                         
-                        UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
+                        UserDefaultUtils.saveKakaoLoginInfo(
+                            response.result?.jwt,
+                            response.result?.nickname
+                        )
                         
                         if let nickname = response.result?.nickname {
-                            UserDefaults.standard.set(nickname, forKey: "nickname")
                             onCompletion(true)
                         } else {    // 최초 로그인 시(닉네임 X)
                             onCompletion(false)
@@ -44,12 +46,15 @@ class LoginViewModel {
     
     func handleAppleLogin(token: String, onCompletion: @escaping (Bool) -> Void) {
         UserAPI.loginApple(parameters: LoginRequest(accessToken: token)) { [weak self] response in
-            print(response)
+            print("애플 로그인 api 연결 성공: \(response)")
             
-            UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
+            UserDefaultUtils.saveAppleLoginInfo(
+                token,
+                response.result?.jwt,
+                response.result?.nickname
+            )
             
             if let nickname = response.result?.nickname {
-                UserDefaults.standard.set(nickname, forKey: "nickname")
                 onCompletion(true)
             } else {    // 최초 로그인 시(닉네임 X)
                 onCompletion(false)

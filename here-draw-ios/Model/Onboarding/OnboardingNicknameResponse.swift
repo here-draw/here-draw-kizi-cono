@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NicknameResponse: Decodable {
+struct OnboardingNicknameResponse: Decodable {
     let isSuccess: Bool
     let code: Int
     let message: String

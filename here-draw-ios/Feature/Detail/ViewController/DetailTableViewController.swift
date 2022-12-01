@@ -37,7 +37,7 @@ extension DetailTableViewController {
         
         var height: CGFloat {
             switch self {
-            case .artInfo: return 580   // 펼쳤을 때, 534
+            case .artInfo: return 400   // 펼쳤을 때, 534
             case .artHashtag: return 151
             case .artistInfo: return 253
             case .otherArts: return 245

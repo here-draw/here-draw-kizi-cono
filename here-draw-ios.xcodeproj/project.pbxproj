@@ -44,8 +44,33 @@
 		4F025DC72927E2C2007A164B /* MainArtsViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DC62927E2C2007A164B /* MainArtsViewType.swift */; };
 		4F025DC929281117007A164B /* MainArtsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DC829281117007A164B /* MainArtsResponse.swift */; };
 		4F025DCB2928240D007A164B /* LoadingCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DCA2928240D007A164B /* LoadingCollectionReusableView.swift */; };
+		4F025DCF29285B30007A164B /* ArticleInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DCE29285B30007A164B /* ArticleInfoController.swift */; };
+		4F025DD129285B8F007A164B /* ArticleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DD029285B8F007A164B /* ArticleAPI.swift */; };
+		4F025DD329285BBA007A164B /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DD229285BBA007A164B /* ArticleCell.swift */; };
+		4F025DD529285CE6007A164B /* ArticleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DD429285CE6007A164B /* ArticleResponse.swift */; };
+		4F025DD829285D7A007A164B /* ArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DD729285D7A007A164B /* ArticleListCell.swift */; };
+		4F025DDA29285DC1007A164B /* ArtistHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DD929285DC1007A164B /* ArtistHomeView.swift */; };
+		4F025DDC29285E3F007A164B /* CustomTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DDB29285E3F007A164B /* CustomTabManViewController.swift */; };
+		4F025DDE29285E85007A164B /* NicknameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DDD29285E85007A164B /* NicknameAPI.swift */; };
+		4F025DE029285F0E007A164B /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DDF29285F0E007A164B /* NicknameResponse.swift */; };
+		4F025DE229285F30007A164B /* SettingAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DE129285F30007A164B /* SettingAllViewController.swift */; };
+		4F025DE429285F4C007A164B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DE329285F4C007A164B /* SettingViewController.swift */; };
+		4F025DE729285F7C007A164B /* ArticleIntroduceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DE629285F7C007A164B /* ArticleIntroduceView.swift */; };
+		4F025DE929285F99007A164B /* BaseGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DE829285F99007A164B /* BaseGalleryView.swift */; };
+		4F025DEB29285FD8007A164B /* RealRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DEA29285FD8007A164B /* RealRegisterView.swift */; };
+		4F025DED2928600A007A164B /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DEC2928600A007A164B /* GalleryCell.swift */; };
+		4F025DEF2928602E007A164B /* RecentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DEE2928602E007A164B /* RecentCell.swift */; };
+		4F025DF2292862A6007A164B /* MyItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DF1292862A6007A164B /* MyItems.swift */; };
+		4F025DF5292862F2007A164B /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DF4292862F2007A164B /* ServiceView.swift */; };
+		4F025DF82928631E007A164B /* AlertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DF72928631E007A164B /* AlertCell.swift */; };
+		4F025DFA29286342007A164B /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DF929286342007A164B /* InfoCell.swift */; };
+		4F025DFC29286369007A164B /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DFB29286369007A164B /* SettingCell.swift */; };
+		4F025DFF292863E8007A164B /* ItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025DFE292863E8007A164B /* ItemsCell.swift */; };
+		4F025E0129286408007A164B /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025E0029286408007A164B /* RegisterCell.swift */; };
+		4F025E042928643A007A164B /* PurchasedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025E032928643A007A164B /* PurchasedCell.swift */; };
+		4F025E062928646A007A164B /* PurchasedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F025E052928646A007A164B /* PurchasedItems.swift */; };
 		4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A914292082F000DBF180 /* NicknameRequest.swift */; };
-		4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* NicknameResponse.swift */; };
+		4F04A9172920831200DBF180 /* OnboardingNicknameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F04A9162920831200DBF180 /* OnboardingNicknameResponse.swift */; };
 		4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673728F6714600E2DFBA /* AppDelegate.swift */; };
 		4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A673928F6714600E2DFBA /* SceneDelegate.swift */; };
 		4F0A674128F6714700E2DFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0A674028F6714700E2DFBA /* Assets.xcassets */; };
@@ -62,6 +87,15 @@
 		4F89176028FBCC3E005A1B81 /* GmarketSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F89175E28FBCC3E005A1B81 /* GmarketSans-Bold.otf */; };
 		4F89176128FBCC3E005A1B81 /* GmarketSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F89175F28FBCC3E005A1B81 /* GmarketSans-Medium.otf */; };
 		4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F89176228FBCD3C005A1B81 /* UIFont+Extension.swift */; };
+		4F9E659129347DFD00363D30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F9E659029347DFD00363D30 /* GoogleService-Info.plist */; };
+		4F9E659429349ADC00363D30 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4F9E659329349ADC00363D30 /* FirebaseAuth */; };
+		4F9E659629349ADC00363D30 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4F9E659529349ADC00363D30 /* FirebaseFirestore */; };
+		4F9E659829349ADC00363D30 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4F9E659729349ADC00363D30 /* FirebaseFirestoreSwift */; };
+		4F9E659A29349ADC00363D30 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4F9E659929349ADC00363D30 /* FirebaseInAppMessaging-Beta */; };
+		4F9E659C29349ADC00363D30 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4F9E659B29349ADC00363D30 /* FirebaseInAppMessagingSwift-Beta */; };
+		4F9E659E29349ADC00363D30 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 4F9E659D29349ADC00363D30 /* FirebaseMessaging */; };
+		4F9E65A029349ADC00363D30 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4F9E659F29349ADC00363D30 /* FirebaseStorage */; };
+		4F9E65A22934D52C00363D30 /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E65A12934D52C00363D30 /* UserDefaultUtils.swift */; };
 		4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736AD291E31A600861A0E /* LoginRequest.swift */; };
 		4FE736B0291E31E400861A0E /* SocialLoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736AF291E31E400861A0E /* SocialLoginResponse.swift */; };
 		4FE736B4291EEA2800861A0E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */; };
@@ -132,8 +166,33 @@
 		4F025DC62927E2C2007A164B /* MainArtsViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainArtsViewType.swift; sourceTree = "<group>"; };
 		4F025DC829281117007A164B /* MainArtsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainArtsResponse.swift; sourceTree = "<group>"; };
 		4F025DCA2928240D007A164B /* LoadingCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionReusableView.swift; sourceTree = "<group>"; };
+		4F025DCE29285B30007A164B /* ArticleInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInfoController.swift; sourceTree = "<group>"; };
+		4F025DD029285B8F007A164B /* ArticleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleAPI.swift; sourceTree = "<group>"; };
+		4F025DD229285BBA007A164B /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		4F025DD429285CE6007A164B /* ArticleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponse.swift; sourceTree = "<group>"; };
+		4F025DD729285D7A007A164B /* ArticleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
+		4F025DD929285DC1007A164B /* ArtistHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHomeView.swift; sourceTree = "<group>"; };
+		4F025DDB29285E3F007A164B /* CustomTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabManViewController.swift; sourceTree = "<group>"; };
+		4F025DDD29285E85007A164B /* NicknameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameAPI.swift; sourceTree = "<group>"; };
+		4F025DDF29285F0E007A164B /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
+		4F025DE129285F30007A164B /* SettingAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAllViewController.swift; sourceTree = "<group>"; };
+		4F025DE329285F4C007A164B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		4F025DE629285F7C007A164B /* ArticleIntroduceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleIntroduceView.swift; sourceTree = "<group>"; };
+		4F025DE829285F99007A164B /* BaseGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGalleryView.swift; sourceTree = "<group>"; };
+		4F025DEA29285FD8007A164B /* RealRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealRegisterView.swift; sourceTree = "<group>"; };
+		4F025DEC2928600A007A164B /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		4F025DEE2928602E007A164B /* RecentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCell.swift; sourceTree = "<group>"; };
+		4F025DF1292862A6007A164B /* MyItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyItems.swift; sourceTree = "<group>"; };
+		4F025DF4292862F2007A164B /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceView.swift; sourceTree = "<group>"; };
+		4F025DF72928631E007A164B /* AlertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCell.swift; sourceTree = "<group>"; };
+		4F025DF929286342007A164B /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		4F025DFB29286369007A164B /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		4F025DFE292863E8007A164B /* ItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCell.swift; sourceTree = "<group>"; };
+		4F025E0029286408007A164B /* RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
+		4F025E032928643A007A164B /* PurchasedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedCell.swift; sourceTree = "<group>"; };
+		4F025E052928646A007A164B /* PurchasedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedItems.swift; sourceTree = "<group>"; };
 		4F04A914292082F000DBF180 /* NicknameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameRequest.swift; sourceTree = "<group>"; };
-		4F04A9162920831200DBF180 /* NicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponse.swift; sourceTree = "<group>"; };
+		4F04A9162920831200DBF180 /* OnboardingNicknameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNicknameResponse.swift; sourceTree = "<group>"; };
 		4F0A673428F6714600E2DFBA /* here-draw-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "here-draw-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0A673728F6714600E2DFBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F0A673928F6714600E2DFBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +211,8 @@
 		4F89175E28FBCC3E005A1B81 /* GmarketSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GmarketSans-Bold.otf"; sourceTree = "<group>"; };
 		4F89175F28FBCC3E005A1B81 /* GmarketSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GmarketSans-Medium.otf"; sourceTree = "<group>"; };
 		4F89176228FBCD3C005A1B81 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		4F9E659029347DFD00363D30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F9E65A12934D52C00363D30 /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
 		4FE736AD291E31A600861A0E /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		4FE736AF291E31E400861A0E /* SocialLoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginResponse.swift; sourceTree = "<group>"; };
 		4FE736B3291EEA2800861A0E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -196,6 +257,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F7BDC030BF47FB6041BBD1 /* Pods_here_draw_ios.framework in Frameworks */,
+				4F9E659429349ADC00363D30 /* FirebaseAuth in Frameworks */,
+				4F9E659E29349ADC00363D30 /* FirebaseMessaging in Frameworks */,
+				4F9E659629349ADC00363D30 /* FirebaseFirestore in Frameworks */,
+				4F9E659829349ADC00363D30 /* FirebaseFirestoreSwift in Frameworks */,
+				4F9E65A029349ADC00363D30 /* FirebaseStorage in Frameworks */,
+				4F9E659C29349ADC00363D30 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				4F9E659A29349ADC00363D30 /* FirebaseInAppMessaging-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,11 +328,92 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4F025DCC29285AF6007A164B /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				4F025DCE29285B30007A164B /* ArticleInfoController.swift */,
+			);
+			path = ArticleList;
+			sourceTree = "<group>";
+		};
+		4F025DCD29285B02007A164B /* ArticleMain */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2A68128FE4BF000C236C1 /* ArticleViewController.swift */,
+				4F025DD029285B8F007A164B /* ArticleAPI.swift */,
+				4F025DD229285BBA007A164B /* ArticleCell.swift */,
+				4F025DD429285CE6007A164B /* ArticleResponse.swift */,
+			);
+			path = ArticleMain;
+			sourceTree = "<group>";
+		};
+		4F025DD629285D58007A164B /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+				4F025DD729285D7A007A164B /* ArticleListCell.swift */,
+				4F025DD929285DC1007A164B /* ArtistHomeView.swift */,
+			);
+			path = Artist;
+			sourceTree = "<group>";
+		};
+		4F025DE529285F61007A164B /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4F025DE629285F7C007A164B /* ArticleIntroduceView.swift */,
+				4F025DEA29285FD8007A164B /* RealRegisterView.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		4F025DF029286284007A164B /* TabmanView */ = {
+			isa = PBXGroup;
+			children = (
+				4F025DF1292862A6007A164B /* MyItems.swift */,
+			);
+			path = TabmanView;
+			sourceTree = "<group>";
+		};
+		4F025DF3292862E5007A164B /* licenseView */ = {
+			isa = PBXGroup;
+			children = (
+				4F025DF4292862F2007A164B /* ServiceView.swift */,
+			);
+			path = licenseView;
+			sourceTree = "<group>";
+		};
+		4F025DF629286308007A164B /* settingcell */ = {
+			isa = PBXGroup;
+			children = (
+				4F025DF72928631E007A164B /* AlertCell.swift */,
+				4F025DF929286342007A164B /* InfoCell.swift */,
+				4F025DFB29286369007A164B /* SettingCell.swift */,
+			);
+			path = settingcell;
+			sourceTree = "<group>";
+		};
+		4F025DFD292863CA007A164B /* MyItemsCell */ = {
+			isa = PBXGroup;
+			children = (
+				4F025DFE292863E8007A164B /* ItemsCell.swift */,
+				4F025E0029286408007A164B /* RegisterCell.swift */,
+			);
+			path = MyItemsCell;
+			sourceTree = "<group>";
+		};
+		4F025E0229286424007A164B /* PurchasedCell */ = {
+			isa = PBXGroup;
+			children = (
+				4F025E032928643A007A164B /* PurchasedCell.swift */,
+				4F025E052928646A007A164B /* PurchasedItems.swift */,
+			);
+			path = PurchasedCell;
+			sourceTree = "<group>";
+		};
 		4F04A913292082DF00DBF180 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				4F04A914292082F000DBF180 /* NicknameRequest.swift */,
-				4F04A9162920831200DBF180 /* NicknameResponse.swift */,
+				4F04A9162920831200DBF180 /* OnboardingNicknameResponse.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -290,6 +439,7 @@
 		4F0A673628F6714600E2DFBA /* here-draw-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4F9E659029347DFD00363D30 /* GoogleService-Info.plist */,
 				4F89175728FACFB7005A1B81 /* Application */,
 				4F89175A28FBC269005A1B81 /* Extension */,
 				4FFB548829025EBB00093E97 /* Model */,
@@ -429,6 +579,7 @@
 			children = (
 				4FF2A67028FD806800C236C1 /* NetworkUtils.swift */,
 				4FF2A68C28FEC4E000C236C1 /* DeviceUtils.swift */,
+				4F9E65A12934D52C00363D30 /* UserDefaultUtils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -436,6 +587,8 @@
 		4FF2A67328FD82B200C236C1 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				4F025DE529285F61007A164B /* Register */,
+				4F025DD629285D58007A164B /* Artist */,
 				4F025DBC2927AB56007A164B /* Splash */,
 				4FF2A68728FE4C1300C236C1 /* Common */,
 				4FE736B9291FDF4A00861A0E /* Onboarding */,
@@ -453,7 +606,17 @@
 		4FF2A67828FE4B4D00C236C1 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				4F025E0229286424007A164B /* PurchasedCell */,
+				4F025DFD292863CA007A164B /* MyItemsCell */,
+				4F025DF629286308007A164B /* settingcell */,
+				4F025DF3292862E5007A164B /* licenseView */,
+				4F025DF029286284007A164B /* TabmanView */,
 				4FF2A68528FE4C0B00C236C1 /* MypageViewController.swift */,
+				4F025DDB29285E3F007A164B /* CustomTabManViewController.swift */,
+				4F025DDD29285E85007A164B /* NicknameAPI.swift */,
+				4F025DDF29285F0E007A164B /* NicknameResponse.swift */,
+				4F025DE129285F30007A164B /* SettingAllViewController.swift */,
+				4F025DE329285F4C007A164B /* SettingViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -461,7 +624,10 @@
 		4FF2A67928FE4B6000C236C1 /* Wish */ = {
 			isa = PBXGroup;
 			children = (
+				4F025DE829285F99007A164B /* BaseGalleryView.swift */,
 				4FF2A68328FE4BFD00C236C1 /* WishViewController.swift */,
+				4F025DEC2928600A007A164B /* GalleryCell.swift */,
+				4F025DEE2928602E007A164B /* RecentCell.swift */,
 			);
 			path = Wish;
 			sourceTree = "<group>";
@@ -469,7 +635,8 @@
 		4FF2A67A28FE4B6900C236C1 /* Article */ = {
 			isa = PBXGroup;
 			children = (
-				4FF2A68128FE4BF000C236C1 /* ArticleViewController.swift */,
+				4F025DCC29285AF6007A164B /* ArticleList */,
+				4F025DCD29285B02007A164B /* ArticleMain */,
 			);
 			path = Article;
 			sourceTree = "<group>";
@@ -518,6 +685,7 @@
 				4F5911DF291B6C4D00D84018 /* View */,
 				4FF4B49F291690710035ED7F /* Cell */,
 				4FF4B49E291690570035ED7F /* ViewController */,
+				4FE736B5291F560000861A0E /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -527,7 +695,6 @@
 			children = (
 				4FF4B49C291646320035ED7F /* LoginViewController.swift */,
 				4F5911E7291BA28A00D84018 /* AgreementViewController.swift */,
-				4FE736B5291F560000861A0E /* LoginViewModel.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -631,6 +798,15 @@
 			dependencies = (
 			);
 			name = "here-draw-ios";
+			packageProductDependencies = (
+				4F9E659329349ADC00363D30 /* FirebaseAuth */,
+				4F9E659529349ADC00363D30 /* FirebaseFirestore */,
+				4F9E659729349ADC00363D30 /* FirebaseFirestoreSwift */,
+				4F9E659929349ADC00363D30 /* FirebaseInAppMessaging-Beta */,
+				4F9E659B29349ADC00363D30 /* FirebaseInAppMessagingSwift-Beta */,
+				4F9E659D29349ADC00363D30 /* FirebaseMessaging */,
+				4F9E659F29349ADC00363D30 /* FirebaseStorage */,
+			);
 			productName = "here-draw-ios";
 			productReference = 4F0A673428F6714600E2DFBA /* here-draw-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -659,6 +835,9 @@
 				Base,
 			);
 			mainGroup = 4F0A672B28F6714600E2DFBA;
+			packageReferences = (
+				4F9E659229349ADC00363D30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4F0A673528F6714600E2DFBA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -674,6 +853,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F89176128FBCC3E005A1B81 /* GmarketSans-Medium.otf in Resources */,
+				4F9E659129347DFD00363D30 /* GoogleService-Info.plist in Resources */,
 				4F0A674128F6714700E2DFBA /* Assets.xcassets in Resources */,
 				4F89176028FBCC3E005A1B81 /* GmarketSans-Bold.otf in Resources */,
 			);
@@ -731,14 +911,17 @@
 				4FF4B49D291646320035ED7F /* LoginViewController.swift in Sources */,
 				4FE736B0291E31E400861A0E /* SocialLoginResponse.swift in Sources */,
 				4FF2A68928FE6DFD00C236C1 /* BaseViewController.swift in Sources */,
+				4F025DE229285F30007A164B /* SettingAllViewController.swift in Sources */,
 				4FFB547328FF9F0800093E97 /* HomeListViewController.swift in Sources */,
+				4F025DF82928631E007A164B /* AlertCell.swift in Sources */,
 				4F025D812924B1C4007A164B /* ArtInfoTableViewCell.swift in Sources */,
 				4F5911DE291B6C0000D84018 /* PassThroughView.swift in Sources */,
 				4FE736B8291F741F00861A0E /* AutoLoginResponse.swift in Sources */,
 				4F025DAB29269C96007A164B /* ArtHashtagCollectionViewCell.swift in Sources */,
+				4F025DFC29286369007A164B /* SettingCell.swift in Sources */,
 				4FFB5495290CD7D900093E97 /* NavigationBarView.swift in Sources */,
 				4F0A673828F6714600E2DFBA /* AppDelegate.swift in Sources */,
-				4F04A9172920831200DBF180 /* NicknameResponse.swift in Sources */,
+				4F04A9172920831200DBF180 /* OnboardingNicknameResponse.swift in Sources */,
 				4F025DAD2926B91E007A164B /* DetailArtInfoData.swift in Sources */,
 				4F461CE529214743006A8576 /* ArtHeaderView.swift in Sources */,
 				4F025D9229254279007A164B /* ArtistInfoResponse.swift in Sources */,
@@ -746,14 +929,20 @@
 				4F025DA529258414007A164B /* DynamicImage.swift in Sources */,
 				4FFB548029016F4A00093E97 /* HomeTopView.swift in Sources */,
 				4F025DC52927DB19007A164B /* HomeListViewModel.swift in Sources */,
+				4F025DDE29285E85007A164B /* NicknameAPI.swift in Sources */,
 				4FE736BB291FE0A800861A0E /* OnboardingViewController.swift in Sources */,
+				4F025DEB29285FD8007A164B /* RealRegisterView.swift in Sources */,
 				4F025D892924B24D007A164B /* ArtsCollectionViewCell.swift in Sources */,
 				4FFB548B29025EE200093E97 /* HomeArtModel.swift in Sources */,
 				4FFB547828FFB77400093E97 /* PagerTab.swift in Sources */,
+				4F025DD829285D7A007A164B /* ArticleListCell.swift in Sources */,
 				4F025DC02927C03D007A164B /* ArticleBannerResponse.swift in Sources */,
+				4F025DE429285F4C007A164B /* SettingViewController.swift in Sources */,
+				4F025DFA29286342007A164B /* InfoCell.swift in Sources */,
 				4F025DB32926BB27007A164B /* ArtsData.swift in Sources */,
 				4F0A673A28F6714600E2DFBA /* SceneDelegate.swift in Sources */,
 				4FF2A68628FE4C0B00C236C1 /* MypageViewController.swift in Sources */,
+				4F025E062928646A007A164B /* PurchasedItems.swift in Sources */,
 				4F025DCB2928240D007A164B /* LoadingCollectionReusableView.swift in Sources */,
 				4F7D9D672921339B00A9ABE1 /* DetailViewController.swift in Sources */,
 				4FE736AE291E31A600861A0E /* LoginRequest.swift in Sources */,
@@ -763,19 +952,30 @@
 				4F5911E6291B725700D84018 /* AgreementTableViewCell.swift in Sources */,
 				4F89176328FBCD3C005A1B81 /* UIFont+Extension.swift in Sources */,
 				4F025D8D2924E12B007A164B /* DetailViewModel.swift in Sources */,
+				4F025DEF2928602E007A164B /* RecentCell.swift in Sources */,
 				4F025DC929281117007A164B /* MainArtsResponse.swift in Sources */,
 				4FF2A68028FE4BE000C236C1 /* MessageViewController.swift in Sources */,
 				4F025D902924E2E4007A164B /* ArtInfoResponse.swift in Sources */,
+				4F025DED2928600A007A164B /* GalleryCell.swift in Sources */,
 				4F025DA729262E12007A164B /* SoldoutView.swift in Sources */,
 				4FF2A68428FE4BFD00C236C1 /* WishViewController.swift in Sources */,
 				4F025D96292551EB007A164B /* OtherArtsResponse.swift in Sources */,
+				4F025DD529285CE6007A164B /* ArticleResponse.swift in Sources */,
 				4FF4B4942913D92F0035ED7F /* BaseView.swift in Sources */,
 				4FF4B49A29142FF40035ED7F /* UIImage+Extension.swift in Sources */,
+				4F025DCF29285B30007A164B /* ArticleInfoController.swift in Sources */,
 				4FFB549E2910445B00093E97 /* PinterestLayout.swift in Sources */,
 				4F025D9D29255CE4007A164B /* RecommendedArtsResponse.swift in Sources */,
 				4F025D9F29256E7E007A164B /* ArtHeaderViewData.swift in Sources */,
+				4F025DE929285F99007A164B /* BaseGalleryView.swift in Sources */,
+				4F025DDC29285E3F007A164B /* CustomTabManViewController.swift in Sources */,
 				4F025DA9292652AE007A164B /* ButtonWithImage.swift in Sources */,
+				4F025DF2292862A6007A164B /* MyItems.swift in Sources */,
+				4F025DE029285F0E007A164B /* NicknameResponse.swift in Sources */,
+				4F025DF5292862F2007A164B /* ServiceView.swift in Sources */,
+				4F025DDA29285DC1007A164B /* ArtistHomeView.swift in Sources */,
 				4F025D9429254D18007A164B /* UserAPI.swift in Sources */,
+				4F025DE729285F7C007A164B /* ArticleIntroduceView.swift in Sources */,
 				4F025DB72926D786007A164B /* OtherArtsTableViewCell.swift in Sources */,
 				4F04A915292082F000DBF180 /* NicknameRequest.swift in Sources */,
 				4F025D832924B1E8007A164B /* ArtHashtagTableViewCell.swift in Sources */,
@@ -785,11 +985,16 @@
 				4F5911DC291B6BC100D84018 /* BottomSheetView.swift in Sources */,
 				4F5911EA291BB58100D84018 /* AgreementContents.swift in Sources */,
 				4FF2A67528FE3E2800C236C1 /* TabBarController.swift in Sources */,
+				4F025DFF292863E8007A164B /* ItemsCell.swift in Sources */,
 				4FFB547B28FFEFA100093E97 /* HomeArtCollectionViewCell.swift in Sources */,
 				4FE736B4291EEA2800861A0E /* UIViewController+Extension.swift in Sources */,
 				4F025D7E2924AAB1007A164B /* DetailTableViewController.swift in Sources */,
+				4F025E0129286408007A164B /* RegisterCell.swift in Sources */,
+				4F025E042928643A007A164B /* PurchasedCell.swift in Sources */,
 				4F025DB52926BB94007A164B /* RecommendedArtsData.swift in Sources */,
 				4FE736B6291F560000861A0E /* LoginViewModel.swift in Sources */,
+				4F025DD329285BBA007A164B /* ArticleCell.swift in Sources */,
+				4F9E65A22934D52C00363D30 /* UserDefaultUtils.swift in Sources */,
 				4F5911E8291BA28A00D84018 /* AgreementViewController.swift in Sources */,
 				4FF4B4A1291691A60035ED7F /* OnboardingCollectionViewCell.swift in Sources */,
 				4FFB54862902221100093E97 /* UIButton+Extension.swift in Sources */,
@@ -804,6 +1009,7 @@
 				4FF2A67728FE45B700C236C1 /* TabBarItem.swift in Sources */,
 				4F025DB92926D87D007A164B /* RecommendedArtsTableViewCell.swift in Sources */,
 				4F025DBE2927AB74007A164B /* SplashViewController.swift in Sources */,
+				4F025DD129285B8F007A164B /* ArticleAPI.swift in Sources */,
 				4F025DC22927C1A1007A164B /* HomeViewModel.swift in Sources */,
 				4FFB5482290170E300093E97 /* BaseScrollView.swift in Sources */,
 				4FFB549229093EAF00093E97 /* UINavigationItem+Extension.swift in Sources */,
@@ -945,6 +1151,7 @@
 				DEVELOPMENT_TEAM = 3AQ2WDVH35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "here-draw-ios/Support/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "여기그림";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -979,6 +1186,7 @@
 				DEVELOPMENT_TEAM = 3AQ2WDVH35;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "here-draw-ios/Support/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "여기그림";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -1022,6 +1230,55 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F9E659229349ADC00363D30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F9E659329349ADC00363D30 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F9E659229349ADC00363D30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4F9E659529349ADC00363D30 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F9E659229349ADC00363D30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		4F9E659729349ADC00363D30 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F9E659229349ADC00363D30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		4F9E659929349ADC00363D30 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F9E659229349ADC00363D30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		4F9E659B29349ADC00363D30 /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F9E659229349ADC00363D30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		4F9E659D29349ADC00363D30 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F9E659229349ADC00363D30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		4F9E659F29349ADC00363D30 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F9E659229349ADC00363D30 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F0A672C28F6714600E2DFBA /* Project object */;
 }
